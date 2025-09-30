@@ -33,6 +33,27 @@ document.addEventListener('DOMContentLoaded', function () {
             this.classList.toggle('deselected');
         });
     });
+
+    // Range slider styling
+    const rangeInputs = document.querySelectorAll('input[type="range"]');
+
+    function updateRangeProgress(input) {
+        const value = input.value;
+        const min = input.min || 0;
+        const max = input.max || 100;
+        const progress = ((value - min) / (max - min)) * 100;
+        input.style.setProperty('--range-progress', progress + '%');
+    }
+
+    // Initialize all range sliders
+    rangeInputs.forEach(input => {
+        updateRangeProgress(input);
+
+        // Update on input change (though these are disabled, this is for future use)
+        input.addEventListener('input', function () {
+            updateRangeProgress(this);
+        });
+    });
 });
 
 // Modal functionality
