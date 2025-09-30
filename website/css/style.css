@@ -1,0 +1,231 @@
+.press-start-2p-regular {
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background-color: #252525;
+    min-height: 100vh;
+    min-width: 100vw;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.halfCircle {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+}
+
+.halfCircle svg {
+    height: 70vh;
+    width: auto;
+    max-width: 100vw;
+}
+
+.pathSVG {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.pathSVG svg {
+    height: 60vh;
+    width: auto;
+    max-width: 50vw;
+}
+
+.language {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 10;
+}
+
+.language-selector {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 3px;
+    display: flex;
+    backdrop-filter: blur(10px);
+    width: fit-content;
+}
+
+.language-toggle {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 50%;
+    height: calc(100% - 6px);
+    background-color: #FFDD0E;
+    border-radius: 17px;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1;
+}
+
+.lang-btn {
+    background: none;
+    border: none;
+    padding: 6px 20px;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    border-radius: 17px;
+    width: 80px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lang-btn img {
+    width: 16px;
+    height: 11px;
+    object-fit: cover;
+    border-radius: 1px;
+    transition: opacity 0.3s ease;
+}
+
+.lang-btn:hover img {
+    opacity: 0.8;
+}
+
+.language-selector:has(.lang-btn[data-lang="nl"]:checked) .language-toggle,
+.language-selector.nl-active .language-toggle {
+    transform: translateX(100%);
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+    max-width: 700px;
+    z-index: 2;
+}
+
+
+button {
+    height: 90px;
+    width: 40vw;
+    max-width: 300px;
+    border-radius: 30px;
+    background-color: #FFDD0E;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s, transform 0.2s;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+}
+
+button p {
+    font-size: 1.2em;
+    font-family: "Press Start 2P", system-ui;
+    text-align: center;
+    word-break: break-word;
+}
+
+@media (max-width: 900px) {
+    .container {
+        flex-direction: column;
+        gap: 1.5rem;
+        max-width: 90vw;
+    }
+
+    button {
+        width: 70vw;
+        max-width: 350px;
+        height: 70px;
+    }
+
+    .halfCircle svg {
+        height: 55vh;
+    }
+
+    .pathSVG svg {
+        height: 45vh;
+        max-width: 60vw;
+    }
+
+    .language {
+        top: 12px;
+        right: 12px;
+    }
+
+    .lang-btn {
+        padding: 5px 18px;
+        width: 70px;
+        height: 30px;
+    }
+
+    .lang-btn img {
+        width: 14px;
+        height: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        gap: 1rem;
+        max-width: 98vw;
+    }
+
+    button {
+        width: 90vw;
+        min-width: 100px;
+        height: 55px;
+        font-size: 0.9em;
+    }
+
+    button p {
+        font-size: 0.8em;
+    }
+
+    .halfCircle svg {
+        height: 42vh;
+    }
+
+    .pathSVG svg {
+        height: 30vh;
+        max-width: 70vw;
+    }
+
+    .language {
+        top: 10px;
+        right: 10px;
+    }
+
+    .lang-btn {
+        padding: 4px 16px;
+        width: 60px;
+        height: 26px;
+    }
+
+    .lang-btn img {
+        width: 12px;
+        height: 8px;
+    }
+}

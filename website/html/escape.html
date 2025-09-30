@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Press+Start+2P&display=swap"
+        rel="stylesheet">
+    <title>Escape Rooms</title>
+    <link rel="stylesheet" href="../css/escape.css">
+</head>
+
+<body>
+    <div class="back-arrow">
+        <button class="back-btn" onclick="window.location.href='index.html'">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M26 16H6M6 16L14 24M6 16L14 8" stroke="#FFDD0E" stroke-width="3" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+        </button>
+    </div>
+
+    <div class="language">
+        <div class="language-selector">
+            <div class="language-toggle"></div>
+            <button class="lang-btn active" data-lang="en">
+                <img src="../fotos/englishFlag.png" alt="English">
+            </button>
+            <button class="lang-btn" data-lang="nl">
+                <img src="../fotos/dutchFlag.png" alt="Dutch">
+            </button>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="controls-grid">
+            <label class="difficulty-btn">
+                <input type="radio" name="difficulty" value="easy">
+                <p>Makkelijk</p>
+            </label>
+            <label class="difficulty-btn">
+                <input type="radio" name="difficulty" value="medium">
+                <p>Medium</p>
+            </label>
+            <label class="difficulty-btn">
+                <input type="radio" name="difficulty" value="hard">
+                <p>Moeilijk</p>
+            </label>
+            <button class="platform-btn">
+                <p>Arvi</p>
+            </button>
+            <button class="platform-btn">
+                <p>Ubisoft</p>
+            </button>
+            <button class="generate-btn">
+                <p>Genereer <br> Spel</p>
+            </button>
+        </div>
+
+        <div class="game-grid">
+            <div class="game-card">
+                <img src="../fotos/new fotos/princeOfPersia.jpg" alt="Prince of Persia: The Dagger of Time">
+                <div class="info-icon" onclick="openModal('prince-modal')">
+                    <img src="../fotos/Info.svg" alt="Info">
+                </div>
+                <div class="game-info">
+                    <div class="game-title">Prince of Persia: The Dagger of Time</div>
+                    <div class="sliders">
+                        <div class="slider-item">
+                            <span class="slider-label">Actie</span>
+                            <input type="range" min="0" max="10" value="8" disabled>
+                        </div>
+                        <div class="slider-item">
+                            <span class="slider-label">Puzzel</span>
+                            <input type="range" min="0" max="10" value="7" disabled>
+                        </div>
+                        <div class="slider-item">
+                            <span class="slider-label">Avontuur</span>
+                            <input type="range" min="0" max="10" value="9" disabled>
+                        </div>
+                    </div>
+                    <div class="game-details">
+                        GAME INFO:<br>
+                        XXXXXXXXXXXXXXXXXXXXX<br>
+                        XXXXXXXXXXXXXXXXXXXXX<br>
+                        XXXXXXXXXXXXXXXXXXXXX
+                    </div>
+                    <a href="#" class="btn">Bekijk de trailer</a>
+                </div>
+            </div>
+
+            <div class="game-card">
+                <img src="../fotos/new fotos/huxley.jpeg" alt="Huxley">
+                <div class="info-icon" onclick="openModal('huxley-modal')">
+                    <img src="../fotos/Info.svg" alt="Info">
+                </div>
+                <div class="game-info">
+                    <div class="game-title">Huxley</div>
+                    <div class="sliders">
+                        <div class="slider-item">
+                            <span class="slider-label">Actie</span>
+                            <input type="range" min="0" max="10" value="6" disabled>
+                        </div>
+                        <div class="slider-item">
+                            <span class="slider-label">Puzzel</span>
+                            <input type="range" min="0" max="10" value="8" disabled>
+                        </div>
+                        <div class="slider-item">
+                            <span class="slider-label">Avontuur</span>
+                            <input type="range" min="0" max="10" value="7" disabled>
+                        </div>
+                    </div>
+                    <div class="game-details">
+                        GAME INFO:<br>
+                        XXXXXXXXXXXXXXXXXXXXX<br>
+                        XXXXXXXXXXXXXXXXXXXXX<br>
+                        XXXXXXXXXXXXXXXXXXXXX
+                    </div>
+                    <a href="#" class="btn">Bekijk de trailer</a>
+                </div>
+            </div>
+
+            <div class="game-card">
+                <img src="../fotos/new fotos/MissionSigma.jpg" alt="Mission Sigma">
+                <div class="info-icon" onclick="openModal('sigma-modal')">
+                    <img src="../fotos/Info.svg" alt="Info">
+                </div>
+                <div class="game-info">
+                    <div class="game-title">Mission Sigma</div>
+                    <div class="sliders">
+                        <div class="slider-item">
+                            <span class="slider-label">Actie</span>
+                            <input type="range" min="0" max="10" value="9" disabled>
+                        </div>
+                        <div class="slider-item">
+                            <span class="slider-label">Puzzel</span>
+                            <input type="range" min="0" max="10" value="6" disabled>
+                        </div>
+                        <div class="slider-item">
+                            <span class="slider-label">Avontuur</span>
+                            <input type="range" min="0" max="10" value="8" disabled>
+                        </div>
+                    </div>
+                    <div class="game-details">
+                        GAME INFO:<br>
+                        XXXXXXXXXXXXXXXXXXXXX<br>
+                        XXXXXXXXXXXXXXXXXXXXX<br>
+                        XXXXXXXXXXXXXXXXXXXXX
+                    </div>
+                    <a href="#" class="btn">Bekijk de trailer</a>
+                </div>
+            </div>
+
+            <div class="game-card">
+                <img src="../fotos/new fotos/Christmas.jpg" alt="Christmas Escape">
+                <div class="info-icon" onclick="openModal('christmas-modal')">
+                    <img src="../fotos/Info.svg" alt="Info">
+                </div>
+                <div class="game-info">
+                    <div class="game-title">Christmas Escape</div>
+                    <div class="sliders">
+                        <div class="slider-item">
+                            <span class="slider-label">Actie</span>
+                            <input type="range" min="0" max="10" value="3" disabled>
+                        </div>
+                        <div class="slider-item">
+                            <span class="slider-label">Puzzel</span>
+                            <input type="range" min="0" max="10" value="7" disabled>
+                        </div>
+                        <div class="slider-item">
+                            <span class="slider-label">Avontuur</span>
+                            <input type="range" min="0" max="10" value="8" disabled>
+                        </div>
+                    </div>
+                    <div class="game-details">
+                        GAME INFO:<br>
+                        XXXXXXXXXXXXXXXXXXXXX<br>
+                        XXXXXXXXXXXXXXXXXXXXX<br>
+                        XXXXXXXXXXXXXXXXXXXXX
+                    </div>
+                    <a href="#" class="btn">Bekijk de trailer</a>
+                </div>
+            </div>
+
+            <div class="game-card">
+                <img src="../fotos/new fotos/beyondMedusaGate.jpg" alt="Beyond Medusa's Gate">
+                <div class="info-icon" onclick="openModal('medusa-modal')">
+                    <img src="../fotos/Info.svg" alt="Info">
+                </div>
+                <div class="game-info">
+                    <div class="game-title">Beyond Medusa's Gate</div>
+                    <div class="sliders">
+                        <div class="slider-item">
+                            <span class="slider-label">Actie</span>
+                            <input type="range" min="0" max="10" value="7" disabled>
+                        </div>
+                        <div class="slider-item">
+                            <span class="slider-label">Puzzel</span>
+                            <input type="range" min="0" max="10" value="8" disabled>
+                        </div>
+                        <div class="slider-item">
+                            <span class="slider-label">Avontuur</span>
+                            <input type="range" min="0" max="10" value="9" disabled>
+                        </div>
+                    </div>
+                    <div class="game-details">
+                        GAME INFO:<br>
+                        XXXXXXXXXXXXXXXXXXXXX<br>
+                        XXXXXXXXXXXXXXXXXXXXX<br>
+                        XXXXXXXXXXXXXXXXXXXXX
+                    </div>
+                    <a href="#" class="btn">Bekijk de trailer</a>
+                </div>
+            </div>
+
+            <div class="game-card">
+                <img src="../fotos/new fotos/thePrison.jpg" alt="The Prison">
+                <div class="info-icon" onclick="openModal('prison-modal')">
+                    <img src="../fotos/Info.svg" alt="Info">
+                </div>
+                <div class="game-info">
+                    <div class="game-title">The Prison</div>
+                    <div class="sliders">
+                        <div class="slider-item">
+                            <span class="slider-label">Actie</span>
+                            <input type="range" min="0" max="10" value="6" disabled>
+                        </div>
+                        <div class="slider-item">
+                            <span class="slider-label">Puzzel</span>
+                            <input type="range" min="0" max="10" value="9" disabled>
+                        </div>
+                        <div class="slider-item">
+                            <span class="slider-label">Avontuur</span>
+                            <input type="range" min="0" max="10" value="7" disabled>
+                        </div>
+                    </div>
+                    <div class="game-details">
+                        GAME INFO:<br>
+                        XXXXXXXXXXXXXXXXXXXXX<br>
+                        XXXXXXXXXXXXXXXXXXXXX<br>
+                        XXXXXXXXXXXXXXXXXXXXX
+                    </div>
+                    <a href="#" class="btn">Bekijk de trailer</a>
+                </div>
+            </div>
+
+            <div class="game-card">
+                <img src="../fotos/new fotos/cyberpunk.webp" alt="Zombie Outbreak">
+                <div class="info-icon" onclick="openModal('cyberpunk-modal')">
+                    <img src="../fotos/Info.svg" alt="Info">
+                </div>
+                <div class="game-info">
+                    <div class="game-title">Cyberpunk</div>
+                    <div class="sliders">
+                        <div class="slider-item">
+                            <span class="slider-label">Actie</span>
+                            <input type="range" min="0" max="10" value="9" disabled>
+                        </div>
+                        <div class="slider-item">
+                            <span class="slider-label">Puzzel</span>
+                            <input type="range" min="0" max="10" value="7" disabled>
+                        </div>
+                        <div class="slider-item">
+                            <span class="slider-label">Avontuur</span>
+                            <input type="range" min="0" max="10" value="8" disabled>
+                        </div>
+                    </div>
+                    <div class="game-details">
+                        GAME INFO:<br>
+                        XXXXXXXXXXXXXXXXXXXXX<br>
+                        XXXXXXXXXXXXXXXXXXXXX<br>
+                        XXXXXXXXXXXXXXXXXXXXX
+                    </div>
+                    <a href="#" class="btn">Bekijk de trailer</a>
+                </div>
+            </div>
+
+            <div class="game-card">
+                <img src="../fotos/new fotos/houseOfFear.jpeg" alt="Haunted Mansion">
+                <div class="info-icon" onclick="openModal('houseOfFear-modal')">
+                    <img src="../fotos/Info.svg" alt="Info">
+                </div>
+                <div class="game-info">
+                    <div class="game-title">House Of Fear</div>
+                    <div class="sliders">
+                        <div class="slider-item">
+                            <span class="slider-label">Actie</span>
+                            <input type="range" min="0" max="10" value="8" disabled>
+                        </div>
+                        <div class="slider-item">
+                            <span class="slider-label">Puzzel</span>
+                            <input type="range" min="0" max="10" value="6" disabled>
+                        </div>
+                        <div class="slider-item">
+                            <span class="slider-label">Avontuur</span>
+                            <input type="range" min="0" max="10" value="9" disabled>
+                        </div>
+                    </div>
+                    <div class="game-details">
+                        GAME INFO:<br>
+                        XXXXXXXXXXXXXXXXXXXXX<br>
+                        XXXXXXXXXXXXXXXXXXXXX<br>
+                        XXXXXXXXXXXXXXXXXXXXX
+                    </div>
+                    <a href="#" class="btn">Bekijk de trailer</a>
+                </div>
+            </div>
+
+            <div class="game-card">
+                <img src="../fotos/new fotos/sanctum.jpg" alt="Sanctum">
+                <div class="info-icon" onclick="openModal('sanctum-modal')">
+                    <img src="../fotos/Info.svg" alt="Info">
+                </div>
+                <div class="game-info">
+                    <div class="game-title">Sanctum</div>
+                    <div class="sliders">
+                        <div class="slider-item">
+                            <span class="slider-label">Actie</span>
+                            <input type="range" min="0" max="10" value="5" disabled>
+                        </div>
+                        <div class="slider-item">
+                            <span class="slider-label">Puzzel</span>
+                            <input type="range" min="0" max="10" value="9" disabled>
+                        </div>
+                        <div class="slider-item">
+                            <span class="slider-label">Avontuur</span>
+                            <input type="range" min="0" max="10" value="8" disabled>
+                        </div>
+                    </div>
+                    <div class="game-details">
+                        GAME INFO:<br>
+                        XXXXXXXXXXXXXXXXXXXXX<br>
+                        XXXXXXXXXXXXXXXXXXXXX<br>
+                        XXXXXXXXXXXXXXXXXXXXX
+                    </div>
+                    <a href="#" class="btn">Bekijk de trailer</a>
+                </div>
+            </div>
+
+            <div class="game-card">
+                <img src="../fotos/new fotos/JungleQuest.jpg" alt="Jungle Quest">
+                <div class="info-icon" onclick="openModal('jungle-modal')">
+                    <img src="../fotos/Info.svg" alt="Info">
+                </div>
+                <div class="game-info">
+                    <div class="game-title">Jungle Quest</div>
+                    <div class="sliders">
+                        <div class="slider-item">
+                            <span class="slider-label">Actie</span>
+                            <input type="range" min="0" max="10" value="7" disabled>
+                        </div>
+                        <div class="slider-item">
+                            <span class="slider-label">Puzzel</span>
+                            <input type="range" min="0" max="10" value="8" disabled>
+                        </div>
+                        <div class="slider-item">
+                            <span class="slider-label">Avontuur</span>
+                            <input type="range" min="0" max="10" value="9" disabled>
+                        </div>
+                    </div>
+                    <div class="game-details">
+                        GAME INFO:<br>
+                        XXXXXXXXXXXXXXXXXXXXX<br>
+                        XXXXXXXXXXXXXXXXXXXXX<br>
+                        XXXXXXXXXXXXXXXXXXXXX
+                    </div>
+                    <a href="#" class="btn">Bekijk de trailer</a>
+                </div>
+            </div>
+
+            <div class="game-card">
+                <img src="../fotos/new fotos/survival.png" alt="Survival">
+                <div class="info-icon" onclick="openModal('survival-modal')">
+                    <img src="../fotos/Info.svg" alt="Info">
+                </div>
+                <div class="game-info">
+                    <div class="game-title">Survival</div>
+                    <div class="sliders">
+                        <div class="slider-item">
+                            <span class="slider-label">Actie</span>
+                            <input type="range" min="0" max="10" value="8" disabled>
+                        </div>
+                        <div class="slider-item">
+                            <span class="slider-label">Puzzel</span>
+                            <input type="range" min="0" max="10" value="7" disabled>
+                        </div>
+                        <div class="slider-item">
+                            <span class="slider-label">Avontuur</span>
+                            <input type="range" min="0" max="10" value="9" disabled>
+                        </div>
+                    </div>
+                    <div class="game-details">
+                        GAME INFO:<br>
+                        XXXXXXXXXXXXXXXXXXXXX<br>
+                        XXXXXXXXXXXXXXXXXXXXX<br>
+                        XXXXXXXXXXXXXXXXXXXXX
+                    </div>
+                    <a href="#" class="btn">Bekijk de trailer</a>
+                </div>
+            </div>
+
+            <div class="game-card">
+                <img src="../fotos/new fotos/alice.jpg" alt="Alice">
+                <div class="info-icon" onclick="openModal('alice-modal')">
+                    <img src="../fotos/Info.svg" alt="Info">
+                </div>
+                <div class="game-info">
+                    <div class="game-title">Alice</div>
+                    <div class="sliders">
+                        <div class="slider-item">
+                            <span class="slider-label">Actie</span>
+                            <input type="range" min="0" max="10" value="4" disabled>
+                        </div>
+                        <div class="slider-item">
+                            <span class="slider-label">Puzzel</span>
+                            <input type="range" min="0" max="10" value="9" disabled>
+                        </div>
+                        <div class="slider-item">
+                            <span class="slider-label">Avontuur</span>
+                            <input type="range" min="0" max="10" value="8" disabled>
+                        </div>
+                    </div>
+                    <div class="game-details">
+                        GAME INFO:<br>
+                        XXXXXXXXXXXXXXXXXXXXX<br>
+                        XXXXXXXXXXXXXXXXXXXXX<br>
+                        XXXXXXXXXXXXXXXXXXXXX
+                    </div>
+                    <a href="#" class="btn">Bekijk de trailer</a>
+                </div>
+            </div>
+
+            <div class="game-card">
+                <img src="../fotos/new fotos/chernobyl.jpg" alt="Chernobyl">
+                <div class="info-icon" onclick="openModal('chernobyl-modal')">
+                    <img src="../fotos/Info.svg" alt="Info">
+                </div>
+                <div class="game-info">
+                    <div class="game-title">Chernobyl</div>
+                    <div class="sliders">
+                        <div class="slider-item">
+                            <span class="slider-label">Actie</span>
+                            <input type="range" min="0" max="10" value="6" disabled>
+                        </div>
+                        <div class="slider-item">
+                            <span class="slider-label">Puzzel</span>
+                            <input type="range" min="0" max="10" value="8" disabled>
+                        </div>
+                        <div class="slider-item">
+                            <span class="slider-label">Avontuur</span>
+                            <input type="range" min="0" max="10" value="9" disabled>
+                        </div>
+                    </div>
+                    <div class="game-details">
+                        GAME INFO:<br>
+                        XXXXXXXXXXXXXXXXXXXXX<br>
+                        XXXXXXXXXXXXXXXXXXXXX<br>
+                        XXXXXXXXXXXXXXXXXXXXX
+                    </div>
+                    <a href="#" class="btn">Bekijk de trailer</a>
+                </div>
+            </div>
+
+            <div class="game-card">
+                <img src="../fotos/new fotos/HOFcursedSouls.jpg" alt="House Of Fear: Cursed Souls">
+                <div class="info-icon" onclick="openModal('HOFcursedSouls-modal')">
+                    <img src="../fotos/Info.svg" alt="Info">
+                </div>
+                <div class="game-info">
+                    <div class="game-title">House Of Fear: Cursed Souls</div>
+                    <div class="sliders">
+                        <div class="slider-item">
+                            <span class="slider-label">Actie</span>
+                            <input type="range" min="0" max="10" value="7" disabled>
+                        </div>
+                        <div class="slider-item">
+                            <span class="slider-label">Puzzel</span>
+                            <input type="range" min="0" max="10" value="6" disabled>
+                        </div>
+                        <div class="slider-item">
+                            <span class="slider-label">Avontuur</span>
+                            <input type="range" min="0" max="10" value="8" disabled>
+                        </div>
+                    </div>
+                    <div class="game-details">
+                        GAME INFO:<br>
+                        XXXXXXXXXXXXXXXXXXXXX<br>
+                        XXXXXXXXXXXXXXXXXXXXX<br>
+                        XXXXXXXXXXXXXXXXXXXXX
+                    </div>
+                    <a href="#" class="btn">Bekijk de trailer</a>
+                </div>
+            </div>
+
+            <div class="game-card">
+                <img src="../fotos/new fotos/HOFcallOfBlood.jpg" alt="House Of Fear: Call Of Blood">
+                <div class="info-icon" onclick="openModal('HOFcallOfBlood-modal')">
+                    <img src="../fotos/Info.svg" alt="Info">
+                </div>
+                <div class="game-info">
+                    <div class="game-title">House Of Fear: Call Of Blood</div>
+                    <div class="sliders">
+                        <div class="slider-item">
+                            <span class="slider-label">Actie</span>
+                            <input type="range" min="0" max="10" value="8" disabled>
+                        </div>
+                        <div class="slider-item">
+                            <span class="slider-label">Puzzel</span>
+                            <input type="range" min="0" max="10" value="5" disabled>
+                        </div>
+                        <div class="slider-item">
+                            <span class="slider-label">Avontuur</span>
+                            <input type="range" min="0" max="10" value="7" disabled>
+                        </div>
+                    </div>
+                    <div class="game-details">
+                        GAME INFO:<br>
+                        XXXXXXXXXXXXXXXXXXXXX<br>
+                        XXXXXXXXXXXXXXXXXXXXX<br>
+                        XXXXXXXXXXXXXXXXXXXXX
+                    </div>
+                    <a href="#" class="btn">Bekijk de trailer</a>
+                </div>
+            </div>
+
+            <div class="game-card">
+                <img src="../fotos/new fotos/escapeTheLostPyramid.png" alt="Escape The Lost Pyramid">
+                <div class="info-icon" onclick="openModal('escape-modal')">
+                    <img src="../fotos/Info.svg" alt="Info">
+                </div>
+                <div class="game-info">
+                    <div class="game-title">Escape The Lost Pyramid</div>
+                    <div class="sliders">
+                        <div class="slider-item">
+                            <span class="slider-label">Actie</span>
+                            <input type="range" min="0" max="10" value="5" disabled>
+                        </div>
+                        <div class="slider-item">
+                            <span class="slider-label">Puzzel</span>
+                            <input type="range" min="0" max="10" value="9" disabled>
+                        </div>
+                        <div class="slider-item">
+                            <span class="slider-label">Avontuur</span>
+                            <input type="range" min="0" max="10" value="8" disabled>
+                        </div>
+                    </div>
+                    <div class="game-details">
+                        GAME INFO:<br>
+                        XXXXXXXXXXXXXXXXXXXXX<br>
+                        XXXXXXXXXXXXXXXXXXXXX<br>
+                        XXXXXXXXXXXXXXXXXXXXX
+                    </div>
+                    <a href="#" class="btn">Bekijk de trailer</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Info Modals -->
+    <div id="prince-modal" class="info-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Prince of Persia: The Dagger of Time</h2>
+                <button class="close-btn" onclick="closeModal('prince-modal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-section">
+                    <h3>Verhaal</h3>
+                    <p>Stap in de wereld van Prince of Persia en ontdek de krachten van de Dolk van de Tijd. Reis door
+                        mystieke landen en los puzzels op in deze meeslepende escape room ervaring.</p>
+                </div>
+                <div class="modal-section">
+                    <h3>Speeltijd</h3>
+                    <p>60-90 minuten</p>
+                </div>
+                <div class="modal-section">
+                    <h3>Spelers</h3>
+                    <p>2-6 spelers</p>
+                </div>
+                <div class="modal-section">
+                    <h3>Leeftijd</h3>
+                    <p>12+ jaar</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="robot-modal" class="info-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Robot Escape</h2>
+                <button class="close-btn" onclick="closeModal('robot-modal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-section">
+                    <h3>Verhaal</h3>
+                    <p>De robots hebben de controle overgenomen! Werk samen om de faciliteit te ontsnappen voordat de AI
+                        volledig online komt. Technologische puzzels en futuristische uitdagingen wachten op je.</p>
+                </div>
+                <div class="modal-section">
+                    <h3>Speeltijd</h3>
+                    <p>45-75 minuten</p>
+                </div>
+                <div class="modal-section">
+                    <h3>Spelers</h3>
+                    <p>3-8 spelers</p>
+                </div>
+                <div class="modal-section">
+                    <h3>Leeftijd</h3>
+                    <p>10+ jaar</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sigma-modal" class="info-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Mission Sigma</h2>
+                <button class="close-btn" onclick="closeModal('sigma-modal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-section">
+                    <h3>Verhaal</h3>
+                    <p>Een geheime missie in het hart van de vijandelijke basis. Infiltreer, verzamel inlichtingen en
+                        ontsnap zonder ontdekt te worden. Teamwork en strategie zijn essentieel.</p>
+                </div>
+                <div class="modal-section">
+                    <h3>Speeltijd</h3>
+                    <p>60-80 minuten</p>
+                </div>
+                <div class="modal-section">
+                    <h3>Spelers</h3>
+                    <p>4-6 spelers</p>
+                </div>
+                <div class="modal-section">
+                    <h3>Leeftijd</h3>
+                    <p>14+ jaar</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="christmas-modal" class="info-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Christmas Escape</h2>
+                <button class="close-btn" onclick="closeModal('christmas-modal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-section">
+                    <h3>Verhaal</h3>
+                    <p>Kerstmis is in gevaar! Help de Kerstman zijn verdwenen cadeaus terug te vinden voordat kerstavond
+                        aanbreekt. Een magische en familievriendelijke escape room ervaring.</p>
+                </div>
+                <div class="modal-section">
+                    <h3>Speeltijd</h3>
+                    <p>45-60 minuten</p>
+                </div>
+                <div class="modal-section">
+                    <h3>Spelers</h3>
+                    <p>2-8 spelers</p>
+                </div>
+                <div class="modal-section">
+                    <h3>Leeftijd</h3>
+                    <p>6+ jaar</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="space-modal" class="info-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Space Escape</h2>
+                <button class="close-btn" onclick="closeModal('space-modal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-section">
+                    <h3>Verhaal</h3>
+                    <p>Jullie ruimteschip is gecrasht op een vreemde planeet. Repareer het schip en ontsnap voordat de
+                        zuurstof opraakt in deze spannende ruimte-avontuur.</p>
+                </div>
+                <div class="modal-section">
+                    <h3>Speeltijd</h3>
+                    <p>50-70 minuten</p>
+                </div>
+                <div class="modal-section">
+                    <h3>Spelers</h3>
+                    <p>3-6 spelers</p>
+                </div>
+                <div class="modal-section">
+                    <h3>Leeftijd</h3>
+                    <p>10+ jaar</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="pirate-modal" class="info-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Pirate Treasure</h2>
+                <button class="close-btn" onclick="closeModal('pirate-modal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-section">
+                    <h3>Verhaal</h3>
+                    <p>Zoek naar de verloren schat van Kapitein Blackbeard. Los puzzels op, ontwijl vallen en vind de
+                        legendarische piratenschat voordat rivaliserende piraten aankomen.</p>
+                </div>
+                <div class="modal-section">
+                    <h3>Speeltijd</h3>
+                    <p>55-75 minuten</p>
+                </div>
+                <div class="modal-section">
+                    <h3>Spelers</h3>
+                    <p>2-7 spelers</p>
+                </div>
+                <div class="modal-section">
+                    <h3>Leeftijd</h3>
+                    <p>8+ jaar</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="zombie-modal" class="info-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Zombie Outbreak</h2>
+                <button class="close-btn" onclick="closeModal('zombie-modal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-section">
+                    <h3>Verhaal</h3>
+                    <p>Een zombie-uitbraak heeft de stad overgenomen. Vind het tegengif in het verlaten laboratorium en
+                        ontsnap voordat jullie zelf geïnfecteerd raken.</p>
+                </div>
+                <div class="modal-section">
+                    <h3>Speeltijd</h3>
+                    <p>60-80 minuten</p>
+                </div>
+                <div class="modal-section">
+                    <h3>Spelers</h3>
+                    <p>4-8 spelers</p>
+                </div>
+                <div class="modal-section">
+                    <h3>Leeftijd</h3>
+                    <p>16+ jaar</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="haunted-modal" class="info-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Haunted Mansion</h2>
+                <button class="close-btn" onclick="closeModal('haunted-modal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-section">
+                    <h3>Verhaal</h3>
+                    <p>Betreed het spookachtige herenhuis en ontdek de donkere geheimen die er verborgen liggen.
+                        Verbreek de vloek en ontsnap aan de boze geesten.</p>
+                </div>
+                <div class="modal-section">
+                    <h3>Speeltijd</h3>
+                    <p>65-85 minuten</p>
+                </div>
+                <div class="modal-section">
+                    <h3>Spelers</h3>
+                    <p>3-6 spelers</p>
+                </div>
+                <div class="modal-section">
+                    <h3>Leeftijd</h3>
+                    <p>14+ jaar</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="medieval-modal" class="info-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Medieval Castle</h2>
+                <button class="close-btn" onclick="closeModal('medieval-modal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-section">
+                    <h3>Verhaal</h3>
+                    <p>Bevrijdt de prinses uit de middeleeuwse burcht. Gebruik jullie moed en slimheid om de ridders te
+                        verslaan en de koninklijke schat te bemachtigen.</p>
+                </div>
+                <div class="modal-section">
+                    <h3>Speeltijd</h3>
+                    <p>60-90 minuten</p>
+                </div>
+                <div class="modal-section">
+                    <h3>Spelers</h3>
+                    <p>2-6 spelers</p>
+                </div>
+                <div class="modal-section">
+                    <h3>Leeftijd</h3>
+                    <p>10+ jaar</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="underwater-modal" class="info-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Underwater Adventure</h2>
+                <button class="close-btn" onclick="closeModal('underwater-modal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-section">
+                    <h3>Verhaal</h3>
+                    <p>Duik naar de diepzee en ontdek de verloren stad Atlantis. Los onderwaterpuzzels op en ontvlucht
+                        de zeemonsters in dit natte avontuur.</p>
+                </div>
+                <div class="modal-section">
+                    <h3>Speeltijd</h3>
+                    <p>55-75 minuten</p>
+                </div>
+                <div class="modal-section">
+                    <h3>Spelers</h3>
+                    <p>3-7 spelers</p>
+                </div>
+                <div class="modal-section">
+                    <h3>Leeftijd</h3>
+                    <p>8+ jaar</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="detective-modal" class="info-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Detective Mystery</h2>
+                <button class="close-btn" onclick="closeModal('detective-modal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-section">
+                    <h3>Verhaal</h3>
+                    <p>Los de moordmysterium op in het victoriaanse Londen. Verzamel aanwijzingen, verhoor verdachten en
+                        ontmasker de moordenaar voordat hij weer toeslaat.</p>
+                </div>
+                <div class="modal-section">
+                    <h3>Speeltijd</h3>
+                    <p>70-90 minuten</p>
+                </div>
+                <div class="modal-section">
+                    <h3>Spelers</h3>
+                    <p>4-6 spelers</p>
+                </div>
+                <div class="modal-section">
+                    <h3>Leeftijd</h3>
+                    <p>16+ jaar</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="wildwest-modal" class="info-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Wild West</h2>
+                <button class="close-btn" onclick="closeModal('wildwest-modal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-section">
+                    <h3>Verhaal</h3>
+                    <p>Jullie zijn outlaws in het Wilde Westen. Steel de goudschat uit de bank en ontsnap op jullie
+                        paarden voordat de sheriff jullie te pakken krijgt.</p>
+                </div>
+                <div class="modal-section">
+                    <h3>Speeltijd</h3>
+                    <p>50-70 minuten</p>
+                </div>
+                <div class="modal-section">
+                    <h3>Spelers</h3>
+                    <p>3-8 spelers</p>
+                </div>
+                <div class="modal-section">
+                    <h3>Leeftijd</h3>
+                    <p>12+ jaar</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="arctic-modal" class="info-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Arctic Expedition</h2>
+                <button class="close-btn" onclick="closeModal('arctic-modal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-section">
+                    <h3>Verhaal</h3>
+                    <p>Jullie expeditie naar de Noordpool is misgegaan. Vind de weg terug naar het basiskamp voordat de
+                        ijsstorm toeslaat en jullie bevriest in de arctische kou.</p>
+                </div>
+                <div class="modal-section">
+                    <h3>Speeltijd</h3>
+                    <p>60-80 minuten</p>
+                </div>
+                <div class="modal-section">
+                    <h3>Spelers</h3>
+                    <p>2-6 spelers</p>
+                </div>
+                <div class="modal-section">
+                    <h3>Leeftijd</h3>
+                    <p>10+ jaar</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="jungle-modal" class="info-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Jungle Temple</h2>
+                <button class="close-btn" onclick="closeModal('jungle-modal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-section">
+                    <h3>Verhaal</h3>
+                    <p>Ontdek de geheimen van de oude Maya-tempel diep in de jungle. Ontwijl dodelijke vallen en los
+                        oude raadsels op om de gouden idool te bemachtigen.</p>
+                </div>
+                <div class="modal-section">
+                    <h3>Speeltijd</h3>
+                    <p>65-85 minuten</p>
+                </div>
+                <div class="modal-section">
+                    <h3>Spelers</h3>
+                    <p>3-7 spelers</p>
+                </div>
+                <div class="modal-section">
+                    <h3>Leeftijd</h3>
+                    <p>12+ jaar</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="cyberpunk-modal" class="info-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Cyberpunk Heist</h2>
+                <button class="close-btn" onclick="closeModal('cyberpunk-modal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-section">
+                    <h3>Verhaal</h3>
+                    <p>Infiltreer de futuristische megacorporatie en steel de geheime data. Hack beveiligingssystemen en
+                        ontsnap uit de neon-verlichte stad van de toekomst.</p>
+                </div>
+                <div class="modal-section">
+                    <h3>Speeltijd</h3>
+                    <p>70-90 minuten</p>
+                </div>
+                <div class="modal-section">
+                    <h3>Spelers</h3>
+                    <p>4-6 spelers</p>
+                </div>
+                <div class="modal-section">
+                    <h3>Leeftijd</h3>
+                    <p>16+ jaar</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="magic-modal" class="info-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Magic School</h2>
+                <button class="close-btn" onclick="closeModal('magic-modal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-section">
+                    <h3>Verhaal</h3>
+                    <p>Jullie zijn leerlingen op een magische school. Los tovenaarsraadsels op, brouw toverdranken en
+                        ontsnap uit de betoverde klaslokalen voordat de school voor altijd gesloten wordt.</p>
+                </div>
+                <div class="modal-section">
+                    <h3>Speeltijd</h3>
+                    <p>55-75 minuten</p>
+                </div>
+                <div class="modal-section">
+                    <h3>Spelers</h3>
+                    <p>2-8 spelers</p>
+                </div>
+                <div class="modal-section">
+                    <h3>Leeftijd</h3>
+                    <p>8+ jaar</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/escape.js"></script>
+</body>
+
+</html>
