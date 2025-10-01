@@ -59,14 +59,22 @@ document.addEventListener('DOMContentLoaded', function () {
 // Modal functionality
 function openModal(modalId) {
     const modal = document.getElementById(modalId);
-    modal.classList.add('active');
-    document.body.style.overflow = 'hidden'; // Prevent background scrolling
+    if (modal) {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Prevent background scrolling
+    } else {
+        console.warn(`Modal with ID '${modalId}' not found`);
+    }
 }
 
 function closeModal(modalId) {
     const modal = document.getElementById(modalId);
-    modal.classList.remove('active');
-    document.body.style.overflow = 'auto'; // Re-enable scrolling
+    if (modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = 'auto'; // Re-enable scrolling
+    } else {
+        console.warn(`Modal with ID '${modalId}' not found`);
+    }
 }
 
 // Close modal when clicking outside of it
