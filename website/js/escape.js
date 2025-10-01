@@ -94,5 +94,55 @@ document.addEventListener('keydown', function (event) {
             activeModal.classList.remove('active');
             document.body.style.overflow = 'auto';
         }
+
+        // Also close trailer modals
+        const activeTrailerModal = document.querySelector('.trailer-modal.active');
+        if (activeTrailerModal) {
+            closeTrailerModal(activeTrailerModal.id);
+        }
+    }
+});
+
+// Trailer modal functionality
+function openTrailerModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Prevent background scrolling
+
+        // Start playing the video
+        const video = modal.querySelector('video');
+        if (video) {
+            video.play().catch(function (error) {
+                console.log('Video autoplay failed:', error);
+            });
+        }
+    } else {
+        console.warn(`Trailer modal with ID '${modalId}' not found`);
+    }
+}
+
+function closeTrailerModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = 'auto'; // Re-enable scrolling
+
+        // Stop the video
+        const video = modal.querySelector('video');
+        if (video) {
+            video.pause();
+            video.currentTime = 0; // Reset to beginning
+        }
+    } else {
+        console.warn(`Trailer modal with ID '${modalId}' not found`);
+    }
+}
+
+// Close trailer modal when clicking outside of it
+document.addEventListener('click', function (event) {
+    if (event.target.classList.contains('trailer-modal')) {
+        const modal = event.target;
+        closeTrailerModal(modal.id);
     }
 });

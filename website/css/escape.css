@@ -412,6 +412,48 @@ body {
     position: relative;
 }
 
+/* Trailer Modal */
+.trailer-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.trailer-modal.active {
+    display: flex;
+}
+
+.trailer-content {
+    background: #333;
+    border-radius: 1rem;
+    padding: 2rem;
+    max-width: 800px;
+    width: 90%;
+    position: relative;
+}
+
+.trailer-video {
+    width: 100%;
+    aspect-ratio: 16/9;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.trailer-video video {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 0.5rem;
+    background: #000;
+}
+
 .modal-header {
     display: flex;
     justify-content: space-between;
