@@ -31,11 +31,53 @@ document.addEventListener('DOMContentLoaded', function () {
         button.addEventListener('click', function () {
             // Toggle deselected class
             this.classList.toggle('deselected');
+
+            // Apply platform filtering
+            applyAllFilters();
         });
     });
 
+    // Function to apply both difficulty and platform filters
+    function applyAllFilters() {
+        const selectedDifficulty = document.querySelector('input[name="difficulty"]:checked')?.value;
+        const deselectedPlatforms = Array.from(document.querySelectorAll('.platform-btn.deselected'))
+            .map(btn => btn.textContent.trim().toLowerCase());
+
+        gameCards.forEach(card => {
+            const cardDifficulty = card.getAttribute('data-difficulty');
+            const cardPlatform = card.getAttribute('data-platform');
+
+            let shouldShow = true;
+
+            // Check difficulty filter
+            if (selectedDifficulty && cardDifficulty !== selectedDifficulty) {
+                shouldShow = false;
+            }
+
+            // Check platform filter (hide if platform is deselected)
+            if (deselectedPlatforms.includes(cardPlatform)) {
+                shouldShow = false;
+            }
+
+            if (shouldShow) {
+                // Show the card with animation
+                card.classList.remove('hidden');
+                setTimeout(() => {
+                    card.style.display = 'block';
+                }, 10);
+            } else {
+                // Hide the card with animation
+                card.classList.add('hidden');
+                setTimeout(() => {
+                    card.style.display = 'none';
+                }, 300);
+            }
+        });
+    }
+
     // Range slider styling
     const rangeInputs = document.querySelectorAll('input[type="range"]');
+    const gameCards = document.querySelectorAll('.game-card');
 
     function updateRangeProgress(input) {
         const value = input.value;
@@ -54,6 +96,44 @@ document.addEventListener('DOMContentLoaded', function () {
             updateRangeProgress(this);
         });
     });
+
+    // Difficulty filtering functionality
+    const difficultyButtons = document.querySelectorAll('input[name="difficulty"]');
+
+    // Handle difficulty filter changes
+    difficultyButtons.forEach(button => {
+        button.addEventListener('change', function () {
+            applyAllFilters();
+        });
+    });
+
+    // Show all games by default when no difficulty is selected
+    function showAllGames() {
+        applyAllFilters();
+    }
+
+    // Add functionality to show all games when clicking the same difficulty button again
+    difficultyButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            // If clicking the same button that's already checked, uncheck it and show all
+            if (this.dataset.wasChecked === 'true') {
+                this.checked = false;
+                this.dataset.wasChecked = 'false';
+                applyAllFilters();
+            } else {
+                // Update all buttons' data attributes
+                difficultyButtons.forEach(btn => {
+                    btn.dataset.wasChecked = btn === this ? 'true' : 'false';
+                });
+            }
+        });
+    });
+
+    // Check if any difficulty is selected on page load, if not show all
+    const checkedDifficulty = document.querySelector('input[name="difficulty"]:checked');
+    if (!checkedDifficulty) {
+        showAllGames();
+    }
 });
 
 // Modal functionality
