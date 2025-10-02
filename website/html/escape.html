@@ -556,6 +556,37 @@
                     <a href="#" class="btn" onclick="openTrailerModal('escape-trailer')">Bekijk de trailer</a>
                 </div>
             </div>
+
+            <div class="game-card" data-difficulty="medium" data-platform="ubisoft">
+                <img src="../fotos/new fotos/notreDame.jpg" alt="Save Notre Dame On Fire">
+                <div class="info-icon" onclick="openModal('saveNotreDame-modal')">
+                    <img src="../fotos/Info.svg" alt="Info">
+                </div>
+                <div class="game-info">
+                    <div class="game-title">Save Notre Dame On Fire</div>
+                    <div class="sliders">
+                        <div class="slider-item">
+                            <span class="slider-label">Avontuur</span>
+                            <input type="range" min="0" max="10" value="10" disabled>
+                        </div>
+                        <div class="slider-item">
+                            <span class="slider-label">Actie</span>
+                            <input type="range" min="0" max="10" value="7" disabled>
+                        </div>
+                        <div class="slider-item">
+                            <span class="slider-label">Puzzelen</span>
+                            <input type="range" min="0" max="10" value="6" disabled>
+                        </div>
+                    </div>
+                    <div class="game-details">
+                        GAME INFO:<br>
+                        XXXXXXXXXXXXXXXXXXXXX<br>
+                        XXXXXXXXXXXXXXXXXXXXX<br>
+                        XXXXXXXXXXXXXXXXXXXXX
+                    </div>
+                    <a href="#" class="btn" onclick="openTrailerModal('saveNotreDame-trailer')">Bekijk de trailer</a>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -1009,6 +1040,29 @@
         </div>
     </div>
 
+    <div id="saveNotreDame-modal" class="info-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Save Notre Dame On Fire</h2>
+                <button class="close-btn" onclick="closeModal('saveNotreDame-modal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-section">
+                    <h3>Speeltijd</h3>
+                    <p>45-60 minuten</p>
+                </div>
+                <div class="modal-section">
+                    <h3>Spelers</h3>
+                    <p>2-4 spelers</p>
+                </div>
+                <div class="modal-section">
+                    <h3>Leeftijd</h3>
+                    <p>12+ jaar</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Trailer Modals -->
     <div id="prince-trailer" class="trailer-modal">
         <div class="trailer-content">
@@ -1244,6 +1298,21 @@
             <div class="trailer-video">
                 <video controls>
                     <source src="../videos/lostPyramid.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </div>
+
+    <div id="saveNotreDame-trailer" class="trailer-modal">
+        <div class="trailer-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Save Notre Dame On Fire - Trailer</h2>
+                <button class="close-btn" onclick="closeTrailerModal('saveNotreDame-trailer')">&times;</button>
+            </div>
+            <div class="trailer-video">
+                <video controls>
+                    <source src="../videos/notreDame.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>
