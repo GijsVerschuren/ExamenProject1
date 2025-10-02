@@ -127,7 +127,7 @@ body {
 
 .language-selector:has(.lang-btn[data-lang="nl"]:checked) .language-toggle,
 .language-selector.nl-active .language-toggle {
-    transform: translateX(100%);
+    transform: translateX(76px);
 }
 
 /* Main Container */
