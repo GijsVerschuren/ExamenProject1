@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Press+Start+2P&display=swap"
+        rel="stylesheet">
+    <title>Genereer Spel</title>
+    <link rel="stylesheet" href="../css/genereer.css">
+</head>
+
+<body>
+    <div class="back-arrow">
+        <button class="back-btn" onclick="window.location.href='escape.html'">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M26 16H6M6 16L14 24M6 16L14 8" stroke="#FFDD0E" stroke-width="3" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+        </button>
+    </div>
+
+    <div class="language">
+        <div class="language-selector nl-active">
+            <div class="language-toggle"></div>
+            <button class="lang-btn" data-lang="en">
+                <img src="../fotos/englishFlag.png" alt="English">
+            </button>
+            <button class="lang-btn active" data-lang="nl">
+                <img src="../fotos/dutchFlag.png" alt="Dutch">
+            </button>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <h1>Genereer Jouw Perfecte Spel</h1>
+            <p>Laat ons een escape room ervaring voor jou selecteren op basis van jouw voorkeuren</p>
+        </div>
+
+        <div class="generator-content">
+            <div class="preference-section">
+                <h2>Stel je gewenste spelervaring in</h2>
+
+                <div class="slider-group">
+                    <label>Avontuur:</label>
+                    <div class="slider-container">
+                        <input type="range" id="avontuurSlider" min="0" max="10" value="5" class="game-slider">
+                        <div class="slider-labels">
+                            <span>0</span>
+                            <span id="avontuurDisplay">5</span>
+                            <span>10</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slider-group">
+                    <label>Actie:</label>
+                    <div class="slider-container">
+                        <input type="range" id="actieSlider" min="0" max="10" value="5" class="game-slider">
+                        <div class="slider-labels">
+                            <span>0</span>
+                            <span id="actieDisplay">5</span>
+                            <span>10</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slider-group">
+                    <label>Puzzelen:</label>
+                    <div class="slider-container">
+                        <input type="range" id="puzzelenSlider" min="0" max="10" value="5" class="game-slider">
+                        <div class="slider-labels">
+                            <span>0</span>
+                            <span id="puzzelenDisplay">5</span>
+                            <span>10</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="generate-section">
+                <button class="generate-game-btn" onclick="generateGames()">
+                    <span>�</span>
+                    Vind Passende Spellen
+                </button>
+            </div>
+
+            <div class="result-section" id="resultSection" style="display: none;">
+                <h2>Aanbevolen Spellen:</h2>
+                <div class="recommended-games" id="recommendedGames">
+                    <!-- Generated games will appear here -->
+                </div>
+                <button class="play-btn" onclick="goToEscapeRooms()">Bekijk Alle Spellen</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/genereer.js"></script>
+</body>
+
+</html>
