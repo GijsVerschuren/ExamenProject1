@@ -384,6 +384,9 @@ function generateGames() {
 
     // Display results
     displayResults(topGames);
+
+    // Collapse the preferences section after generating
+    collapsePreferences();
 }
 
 function displayResults(games) {
@@ -520,3 +523,37 @@ document.addEventListener('click', function (event) {
         }
     }
 });
+
+// Collapse/expand functionality
+function collapsePreferences() {
+    const preferenceSection = document.querySelector('.preference-section');
+    const collapseToggle = document.getElementById('collapseToggle');
+
+    if (preferenceSection && collapseToggle) {
+        preferenceSection.classList.add('collapsed');
+        collapseToggle.classList.add('visible');
+        collapseToggle.textContent = 'Toon Instellingen';
+    }
+}
+
+function expandPreferences() {
+    const preferenceSection = document.querySelector('.preference-section');
+    const collapseToggle = document.getElementById('collapseToggle');
+
+    if (preferenceSection && collapseToggle) {
+        preferenceSection.classList.remove('collapsed');
+        collapseToggle.textContent = 'Verberg Instellingen';
+    }
+}
+
+function togglePreferences() {
+    const preferenceSection = document.querySelector('.preference-section');
+
+    if (preferenceSection) {
+        if (preferenceSection.classList.contains('collapsed')) {
+            expandPreferences();
+        } else {
+            collapsePreferences();
+        }
+    }
+}

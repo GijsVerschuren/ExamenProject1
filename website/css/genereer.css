@@ -80,7 +80,7 @@ body {
     top: 3px;
     left: 3px;
     width: 50%;
-    height: calc(100% - 6px);
+    height: calc(100% - 6.5px);
     background-color: #FFDD0E;
     border-radius: 17px;
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -160,6 +160,16 @@ body {
 
 .preference-section {
     margin-bottom: 2rem;
+    transition: all 0.5s ease-in-out;
+    overflow: hidden;
+}
+
+.preference-section.collapsed {
+    max-height: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    opacity: 0;
 }
 
 .preference-section h2 {
@@ -168,6 +178,31 @@ body {
     color: #FFDD0E;
     margin-bottom: 2rem;
     text-align: center;
+}
+
+/* Toggle button for collapsing */
+.collapse-toggle {
+    display: none;
+    background: #FFDD0E;
+    color: #000;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.5rem;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 1rem;
+}
+
+.collapse-toggle.visible {
+    display: inline-block;
+}
+
+.collapse-toggle:hover {
+    background: #e6c60d;
+    transform: translateY(-1px);
 }
 
 .slider-group {
@@ -250,7 +285,6 @@ body {
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(255, 221, 14, 0.3);
     min-width: 200px;
 }
 
