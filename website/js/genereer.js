@@ -453,3 +453,70 @@ function getDifficultyText(difficulty) {
 function goToEscapeRooms() {
     window.location.href = 'escape.html';
 }
+
+// Modal functionality
+function openModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Prevent background scrolling
+    } else {
+        console.warn(`Modal with ID '${modalId}' not found`);
+    }
+}
+
+function closeModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = 'auto'; // Re-enable scrolling
+    } else {
+        console.warn(`Modal with ID '${modalId}' not found`);
+    }
+}
+
+function openTrailerModal(trailerId) {
+    const modal = document.getElementById(trailerId);
+    if (modal) {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+
+        // Start video if it exists
+        const video = modal.querySelector('video');
+        if (video) {
+            video.currentTime = 0;
+            video.play();
+        }
+    } else {
+        console.warn(`Trailer modal with ID '${trailerId}' not found`);
+    }
+}
+
+function closeTrailerModal(trailerId) {
+    const modal = document.getElementById(trailerId);
+    if (modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = 'auto';
+
+        // Stop video if it exists
+        const video = modal.querySelector('video');
+        if (video) {
+            video.pause();
+            video.currentTime = 0;
+        }
+    } else {
+        console.warn(`Trailer modal with ID '${trailerId}' not found`);
+    }
+}
+
+// Close modal when clicking outside of it
+document.addEventListener('click', function (event) {
+    if (event.target.classList.contains('modal') && event.target.classList.contains('active')) {
+        const modalId = event.target.id;
+        if (modalId.includes('trailer')) {
+            closeTrailerModal(modalId);
+        } else {
+            closeModal(modalId);
+        }
+    }
+});

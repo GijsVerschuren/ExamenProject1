@@ -467,6 +467,126 @@ body {
     transform: translateY(-1px);
 }
 
+/* Modal Styles */
+.info-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-modal.active {
+    display: flex;
+}
+
+.modal-content {
+    background: #333;
+    border-radius: 1rem;
+    padding: 2rem;
+    max-width: 500px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    position: relative;
+}
+
+.trailer-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.trailer-modal.active {
+    display: flex;
+}
+
+.trailer-content {
+    background: #333;
+    border-radius: 1rem;
+    padding: 2rem;
+    max-width: 800px;
+    width: 90%;
+    position: relative;
+}
+
+.trailer-video {
+    width: 100%;
+    aspect-ratio: 16/9;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.trailer-video video {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 0.5rem;
+    background: #000;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.modal-title {
+    font-family: "Oswald", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #FFDD0E;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #FFDD0E;
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+}
+
+.close-btn:hover {
+    color: #FFE03D;
+}
+
+.modal-body {
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    color: #ccc;
+    line-height: 1.6;
+}
+
+.modal-section {
+    margin-bottom: 1.5rem;
+}
+
+.modal-section h3 {
+    font-family: "Oswald", sans-serif;
+    color: #FFDD0E;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.modal-section p {
+    margin: 0;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .header h1 {
