@@ -33,18 +33,27 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Update slider displays
     if (avontuurSlider && avontuurDisplay) {
+        // Sync display with actual slider value on page load
+        avontuurDisplay.textContent = avontuurSlider.value;
+
         avontuurSlider.addEventListener('input', function () {
             avontuurDisplay.textContent = this.value;
         });
     }
 
     if (actieSlider && actieDisplay) {
+        // Sync display with actual slider value on page load
+        actieDisplay.textContent = actieSlider.value;
+
         actieSlider.addEventListener('input', function () {
             actieDisplay.textContent = this.value;
         });
     }
 
     if (puzzelenSlider && puzzelenDisplay) {
+        // Sync display with actual slider value on page load
+        puzzelenDisplay.textContent = puzzelenSlider.value;
+
         puzzelenSlider.addEventListener('input', function () {
             puzzelenDisplay.textContent = this.value;
         });
