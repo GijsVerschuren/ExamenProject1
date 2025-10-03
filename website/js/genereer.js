@@ -401,7 +401,9 @@ function displayResults(games) {
         // Create game cards using the same structure as escape.html
         recommendedGames.innerHTML = games.map(game => `
             <div class="game-card" data-difficulty="${game.difficulty}" data-platform="${game.platform}">
-                <img src="${game.image}" alt="${game.name}">
+                <div class="game-image-container">
+                    <img src="${game.image}" alt="${game.name}">
+                </div>
                 <div class="info-icon" onclick="openModal('${game.modalId}')">
                     <img src="../fotos/Info.svg" alt="Info">
                 </div>
