@@ -275,7 +275,7 @@ body {
 }
 
 .generate-game-btn {
-    background: linear-gradient(135deg, #FFDD0E, #FFC107);
+    background: #FFDD0E;
     color: #000;
     border: none;
     padding: 1rem 2rem;
@@ -290,7 +290,6 @@ body {
 
 .generate-game-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(255, 221, 14, 0.4);
 }
 
 .generate-game-btn span {

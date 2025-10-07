@@ -74,8 +74,8 @@ const games = [
         modalId: "prince-modal",
         trailerId: "prince-trailer",
         characteristics: {
-            avontuur: 95,  // High adventure with time manipulation
-            actie: 85,     // Action-packed sequences
+            avontuur: 80,  // High adventure with time manipulation
+            actie: 90,     // Action-packed sequences
             puzzelen: 70   // Moderate puzzle elements
         }
     },
@@ -91,9 +91,9 @@ const games = [
         modalId: "huxley-modal",
         trailerId: "huxley-trailer",
         characteristics: {
-            avontuur: 80,  // Sci-fi adventure
-            actie: 60,     // Some action elements
-            puzzelen: 90   // Heavy focus on tech puzzles
+            avontuur: 70,  // Sci-fi adventure
+            actie: 80,     // Some action elements
+            puzzelen: 60   // Heavy focus on tech puzzles
         }
     },
     {
@@ -108,9 +108,9 @@ const games = [
         modalId: "mission-modal",
         trailerId: "mission-trailer",
         characteristics: {
-            avontuur: 75,  // Stealth mission adventure
-            actie: 85,     // Action-heavy infiltration
-            puzzelen: 55   // Basic tactical puzzles
+            avontuur: 70,  // Stealth mission adventure
+            actie: 70,     // Action-heavy infiltration
+            puzzelen: 50   // Basic tactical puzzles
         }
     },
     {
@@ -125,9 +125,9 @@ const games = [
         modalId: "christmas-modal",
         trailerId: "christmas-trailer",
         characteristics: {
-            avontuur: 70,  // Festive adventure
-            actie: 40,     // Low action, family-friendly
-            puzzelen: 80   // Gift-finding puzzles
+            avontuur: 60,  // Festive adventure
+            actie: 60,     // Low action, family-friendly
+            puzzelen: 40   // Gift-finding puzzles
         }
     },
     {
@@ -142,9 +142,9 @@ const games = [
         modalId: "medusa-modal",
         trailerId: "medusa-trailer",
         characteristics: {
-            avontuur: 90,  // Mythological adventure
-            actie: 70,     // Combat against creatures
-            puzzelen: 85   // Ancient riddles and mechanisms
+            avontuur: 70,  // Mythological adventure
+            actie: 80,     // Combat against creatures
+            puzzelen: 70   // Ancient riddles and mechanisms
         }
     },
     {
@@ -159,9 +159,9 @@ const games = [
         modalId: "prison-modal",
         trailerId: "prison-trailer",
         characteristics: {
-            avontuur: 85,  // Escape adventure
-            actie: 75,     // Stealth and timing
-            puzzelen: 90   // Complex escape planning
+            avontuur: 70,  // Escape adventure
+            actie: 70,     // Stealth and timing
+            puzzelen: 40   // Complex escape planning
         }
     },
     {
@@ -178,7 +178,7 @@ const games = [
         characteristics: {
             avontuur: 80,  // Corporate infiltration
             actie: 90,     // High-tech action
-            puzzelen: 85   // Hacking and tech puzzles
+            puzzelen: 70   // Hacking and tech puzzles
         }
     },
     {
@@ -193,9 +193,9 @@ const games = [
         modalId: "housefear-modal",
         trailerId: "housefear-trailer",
         characteristics: {
-            avontuur: 85,  // Horror house exploration
-            actie: 50,     // Jump scares, not action
-            puzzelen: 70   // Hidden object finding
+            avontuur: 60,  // Horror house exploration
+            actie: 70,     // Jump scares, not action
+            puzzelen: 40   // Hidden object finding
         }
     },
     {
@@ -210,9 +210,9 @@ const games = [
         modalId: "sanctum-modal",
         trailerId: "sanctum-trailer",
         characteristics: {
-            avontuur: 90,  // Mystical adventure
-            actie: 65,     // Supernatural encounters
-            puzzelen: 95   // Ancient ritual puzzles
+            avontuur: 70,  // Mystical adventure
+            actie: 80,     // Supernatural encounters
+            puzzelen: 60   // Ancient ritual puzzles
         }
     },
     {
@@ -227,9 +227,9 @@ const games = [
         modalId: "jungle-modal",
         trailerId: "jungle-trailer",
         characteristics: {
-            avontuur: 95,  // Classic adventure exploration
-            actie: 60,     // Jungle dangers
-            puzzelen: 85   // Temple mechanisms
+            avontuur: 90,  // Classic adventure exploration
+            actie: 70,     // Jungle dangers
+            puzzelen: 30   // Temple mechanisms
         }
     },
     {
@@ -244,9 +244,9 @@ const games = [
         modalId: "survival-modal",
         trailerId: "survival-trailer",
         characteristics: {
-            avontuur: 85,  // Wilderness survival
-            actie: 70,     // Resource gathering urgency
-            puzzelen: 75   // Survival problem solving
+            avontuur: 40,  // Wilderness survival
+            actie: 80,     // Resource gathering urgency
+            puzzelen: 20   // Survival problem solving
         }
     },
     {
@@ -262,8 +262,8 @@ const games = [
         trailerId: "alice-trailer",
         characteristics: {
             avontuur: 90,  // Wonderland exploration
-            actie: 55,     // Whimsical encounters
-            puzzelen: 85   // Logic-defying puzzles
+            actie: 100,    // Whimsical encounters
+            puzzelen: 50   // Logic-defying puzzles
         }
     },
     {
@@ -278,9 +278,9 @@ const games = [
         modalId: "chernobyl-modal",
         trailerId: "chernobyl-trailer",
         characteristics: {
-            avontuur: 80,  // Post-apocalyptic exploration
-            actie: 65,     // Radiation dangers
-            puzzelen: 85   // Technical reactor puzzles
+            avontuur: 70,  // Post-apocalyptic exploration
+            actie: 70,     // Radiation dangers
+            puzzelen: 40   // Technical reactor puzzles
         }
     },
     {
@@ -295,9 +295,9 @@ const games = [
         modalId: "cursedsouls-modal",
         trailerId: "cursedsouls-trailer",
         characteristics: {
-            avontuur: 85,  // Supernatural adventure
-            actie: 55,     // Horror atmosphere
-            puzzelen: 80   // Exorcism rituals
+            avontuur: 50,  // Supernatural adventure
+            actie: 70,     // Horror atmosphere
+            puzzelen: 40   // Exorcism rituals
         }
     },
     {
@@ -312,9 +312,9 @@ const games = [
         modalId: "callofblood-modal",
         trailerId: "callofblood-trailer",
         characteristics: {
-            avontuur: 85,  // Extended horror adventure
-            actie: 60,     // Intense scares
-            puzzelen: 75   // Horror-themed puzzles
+            avontuur: 100, // Extended horror adventure
+            actie: 100,    // Intense scares
+            puzzelen: 100  // Horror-themed puzzles
         }
     },
     {
@@ -329,9 +329,9 @@ const games = [
         modalId: "pyramid-modal",
         trailerId: "pyramid-trailer",
         characteristics: {
-            avontuur: 90,  // Egyptian exploration
-            actie: 50,     // Trap avoidance
-            puzzelen: 90   // Hieroglyph puzzles
+            avontuur: 60,  // Egyptian exploration
+            actie: 80,     // Trap avoidance
+            puzzelen: 40   // Hieroglyph puzzles
         }
     },
     {
@@ -346,9 +346,9 @@ const games = [
         modalId: "notredame-modal",
         trailerId: "notredame-trailer",
         characteristics: {
-            avontuur: 75,  // Rescue mission
-            actie: 85,     // Time pressure, firefighting
-            puzzelen: 70   // Emergency procedures
+            avontuur: 100, // Rescue mission
+            actie: 70,     // Time pressure, firefighting
+            puzzelen: 60   // Emergency procedures
         }
     }
 ];
