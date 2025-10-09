@@ -247,10 +247,10 @@ body {
 
 .info-icon {
     position: absolute;
-    bottom: 27px;
+    bottom: 20px;
     right: 15px;
-    width: 30px;
-    height: 30px;
+    width: 45px;
+    height: 45px;
     cursor: pointer;
     transition: transform 0.2s ease;
     z-index: 5;
