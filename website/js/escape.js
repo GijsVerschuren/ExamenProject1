@@ -25,12 +25,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Button selection functionality
     const platformButtons = document.querySelectorAll('.platform-btn');
+    const gameCards = document.querySelectorAll('.game-card');
 
     // Handle platform button clicks
     platformButtons.forEach(button => {
         button.addEventListener('click', function () {
-            // Toggle deselected class
-            this.classList.toggle('deselected');
+            // Toggle selected class
+            this.classList.toggle('selected');
 
             // Apply platform filtering
             applyAllFilters();
@@ -40,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Function to apply both difficulty and platform filters
     function applyAllFilters() {
         const selectedDifficulty = document.querySelector('input[name="difficulty"]:checked')?.value;
-        const deselectedPlatforms = Array.from(document.querySelectorAll('.platform-btn.deselected'))
+        const selectedPlatforms = Array.from(document.querySelectorAll('.platform-btn.selected'))
             .map(btn => btn.textContent.trim().toLowerCase());
 
         gameCards.forEach(card => {
@@ -54,8 +55,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 shouldShow = false;
             }
 
-            // Check platform filter (hide if platform is deselected)
-            if (deselectedPlatforms.includes(cardPlatform)) {
+            // Check platform filter (show only if platform is selected, or if no platforms are selected show all)
+            if (selectedPlatforms.length > 0 && !selectedPlatforms.includes(cardPlatform)) {
                 shouldShow = false;
             }
 
@@ -77,7 +78,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Range slider styling
     const rangeInputs = document.querySelectorAll('input[type="range"]');
-    const gameCards = document.querySelectorAll('.game-card');
 
     function updateRangeProgress(input) {
         const value = input.value;

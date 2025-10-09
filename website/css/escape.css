@@ -163,12 +163,25 @@ body {
 
 /* Button Styles */
 .difficulty-btn,
-.platform-btn,
 .generate-btn {
     height: 70px;
     width: 100%;
     border-radius: 25px;
     background-color: #FFDD0E;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s, transform 0.2s;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+}
+
+.platform-btn {
+    height: 70px;
+    width: 100%;
+    border-radius: 25px;
+    background-color: #B8A000;
     border: none;
     display: flex;
     align-items: center;
@@ -192,22 +205,30 @@ body {
     background-color: #B8A000;
 }
 
-.platform-btn.deselected {
-    background-color: #6B6B6B;
+.platform-btn.selected {
+    background-color: #FFDD0E;
 }
 
-.platform-btn.deselected p {
-    color: #B8B8B8;
+.platform-btn.selected p {
+    color: #252525;
 }
 
 .difficulty-btn p,
-.platform-btn p,
 .generate-btn p {
     font-size: 0.9em;
     font-family: "Press Start 2P", system-ui;
     text-align: center;
     word-break: break-word;
     color: #252525;
+    transition: color 0.2s ease;
+}
+
+.platform-btn p {
+    font-size: 1.1em;
+    font-family: "Press Start 2P", system-ui;
+    text-align: center;
+    word-break: break-word;
+    color: #fff;
     transition: color 0.2s ease;
 }
 
@@ -223,8 +244,8 @@ body {
     transform: translateY(-2px);
 }
 
-.platform-btn.deselected:hover {
-    background-color: #7A7A7A;
+.platform-btn.selected:hover {
+    background-color: #9B8A00;
     transform: translateY(-2px);
 }
 
