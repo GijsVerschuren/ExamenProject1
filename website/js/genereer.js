@@ -394,8 +394,8 @@ function generateGames() {
     // Display results
     displayResults(topGames);
 
-    // Collapse the preferences section after generating
-    collapsePreferences();
+    // Don't automatically collapse preferences anymore
+    // The layout will switch to side-by-side automatically
 }
 
 function displayResults(games) {
@@ -446,14 +446,17 @@ function displayResults(games) {
         `).join('');
     }
 
-    // Show result section
+    // Hide sliders and generate button
+    collapsePreferences();
+
+    // Show result section with animation from bottom
     resultSection.style.display = 'block';
 
-    // Scroll to result
-    resultSection.scrollIntoView({ behavior: 'smooth' });
-}
-
-function getDifficultyText(difficulty) {
+    // Trigger animation after a small delay to ensure display change is processed
+    setTimeout(() => {
+        resultSection.classList.add('show');
+    }, 50);
+} function getDifficultyText(difficulty) {
     switch (difficulty) {
         case 'easy': return 'Makkelijk';
         case 'medium': return 'Medium';
@@ -548,10 +551,22 @@ function collapsePreferences() {
 function expandPreferences() {
     const preferenceSection = document.querySelector('.preference-section');
     const collapseToggle = document.getElementById('collapseToggle');
+    const generateSection = document.querySelector('.generate-section');
+    const resultSection = document.getElementById('resultSection');
 
     if (preferenceSection && collapseToggle) {
         preferenceSection.classList.remove('collapsed');
         collapseToggle.textContent = 'Verberg Instellingen';
+        collapseToggle.classList.remove('visible');
+
+        // Show the generate button again
+        generateSection.classList.remove('hidden');
+
+        // Hide results section with animation
+        resultSection.classList.remove('show');
+        setTimeout(() => {
+            resultSection.style.display = 'none';
+        }, 800);
     }
 }
 
@@ -565,4 +580,13 @@ function togglePreferences() {
             collapsePreferences();
         }
     }
+}
+
+function closeResults() {
+    const resultSection = document.getElementById('resultSection');
+
+    resultSection.classList.remove('show');
+    setTimeout(() => {
+        resultSection.style.display = 'none';
+    }, 800);
 }

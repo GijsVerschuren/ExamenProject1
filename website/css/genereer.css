@@ -156,12 +156,23 @@ body {
     border-radius: 1rem;
     padding: 2rem;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    transition: all 0.5s ease-in-out;
 }
 
 .preference-section {
     margin-bottom: 2rem;
     transition: all 0.5s ease-in-out;
     overflow: hidden;
+}
+
+.preference-section.collapsed {
+    max-height: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    opacity: 0;
 }
 
 .preference-section.collapsed {
@@ -272,6 +283,16 @@ body {
 .generate-section {
     text-align: center;
     margin-bottom: 2rem;
+    transition: all 0.5s ease-in-out;
+    overflow: hidden;
+}
+
+.generate-section.hidden {
+    max-height: 0;
+    margin-bottom: 0;
+    opacity: 0;
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 .generate-game-btn {
@@ -298,9 +319,25 @@ body {
 }
 
 .result-section {
-    border-top: 2px solid #555;
-    padding-top: 2rem;
     text-align: center;
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    opacity: 0;
+    transform: translateY(100vh);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #333;
+    border-radius: 1rem 1rem 0 0;
+    max-height: 80vh;
+    overflow-y: auto;
+    z-index: 100;
+    padding: 2rem;
+}
+
+.result-section.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .result-section h2 {
@@ -312,7 +349,7 @@ body {
 
 .recommended-games {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
     margin-bottom: 1.5rem;
 }
@@ -634,6 +671,13 @@ body {
 }
 
 /* Responsive Design */
+@media (max-width: 1024px) {
+    .recommended-games {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+}
+
 @media (max-width: 768px) {
     .header h1 {
         font-size: 2rem;
@@ -645,6 +689,16 @@ body {
 
     .generator-content {
         padding: 1.5rem;
+    }
+
+    .result-section {
+        max-height: 85vh;
+        padding: 1.5rem;
+    }
+
+    .recommended-games {
+        grid-template-columns: 1fr;
+        gap: 1rem;
     }
 
     .button-group {
