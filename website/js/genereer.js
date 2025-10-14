@@ -26,10 +26,12 @@ document.addEventListener('DOMContentLoaded', function () {
     const avontuurSlider = document.getElementById('avontuurSlider');
     const actieSlider = document.getElementById('actieSlider');
     const puzzelenSlider = document.getElementById('puzzelenSlider');
+    const personenSlider = document.getElementById('personenSlider');
 
     const avontuurDisplay = document.getElementById('avontuurDisplay');
     const actieDisplay = document.getElementById('actieDisplay');
     const puzzelenDisplay = document.getElementById('puzzelenDisplay');
+    const personenDisplay = document.getElementById('personenDisplay');
 
     // Update slider displays
     if (avontuurSlider && avontuurDisplay) {
@@ -58,6 +60,15 @@ document.addEventListener('DOMContentLoaded', function () {
             puzzelenDisplay.textContent = this.value;
         });
     }
+
+    if (personenSlider && personenDisplay) {
+        // Sync display with actual slider value on page load
+        personenDisplay.textContent = personenSlider.value;
+
+        personenSlider.addEventListener('input', function () {
+            personenDisplay.textContent = this.value;
+        });
+    }
 });
 
 // Game data with characteristics (0-100 scale)
@@ -68,7 +79,7 @@ const games = [
         platform: "ubisoft",
         duration: "medium",
         minPlayers: 2,
-        maxPlayers: 6,
+        maxPlayers: 4,
         description: "Stap in de wereld van Prince of Persia en ontdek de krachten van de Dolk van de Tijd.",
         image: "../fotos/new fotos/princeOfPersia.jpg",
         modalId: "prince-modal",
@@ -85,7 +96,7 @@ const games = [
         platform: "ubisoft",
         duration: "medium",
         minPlayers: 2,
-        maxPlayers: 6,
+        maxPlayers: 4,
         description: "Een dystopische toekomst waar technologie de overhand heeft genomen.",
         image: "../fotos/new fotos/huxley.jpeg",
         modalId: "huxley-modal",
@@ -101,7 +112,7 @@ const games = [
         difficulty: "easy",
         platform: "arvi",
         duration: "medium",
-        minPlayers: 4,
+        minPlayers: 2,
         maxPlayers: 6,
         description: "Een geheime missie in het hart van de vijandelijke basis.",
         image: "../fotos/new fotos/MissionSigma.jpg",
@@ -119,7 +130,7 @@ const games = [
         platform: "arvi",
         duration: "short",
         minPlayers: 2,
-        maxPlayers: 8,
+        maxPlayers: 6,
         description: "Help de Kerstman zijn verdwenen cadeaus terug te vinden.",
         image: "../fotos/new fotos/Christmas.jpg",
         modalId: "christmas-modal",
@@ -152,7 +163,7 @@ const games = [
         difficulty: "hard",
         platform: "arvi",
         duration: "medium",
-        minPlayers: 3,
+        minPlayers: 2,
         maxPlayers: 6,
         description: "Plan jullie ontsnapping uit een maximum security gevangenis.",
         image: "../fotos/new fotos/thePrison.jpg",
@@ -169,7 +180,7 @@ const games = [
         difficulty: "hard",
         platform: "arvi",
         duration: "long",
-        minPlayers: 4,
+        minPlayers: 2,
         maxPlayers: 6,
         description: "Infiltreer de futuristische megacorporatie.",
         image: "../fotos/new fotos/cyberpunk.webp",
@@ -187,7 +198,7 @@ const games = [
         platform: "arvi",
         duration: "short",
         minPlayers: 2,
-        maxPlayers: 6,
+        maxPlayers: 4,
         description: "Een spookachtig huis vol geheimen en griezelige verassingen.",
         image: "../fotos/new fotos/houseOfFear.jpeg",
         modalId: "housefear-modal",
@@ -204,7 +215,7 @@ const games = [
         platform: "arvi",
         duration: "medium",
         minPlayers: 2,
-        maxPlayers: 6,
+        maxPlayers: 4,
         description: "Betreed het heilige sanctuarium waar oude krachten heersen.",
         image: "../fotos/new fotos/sanctum.jpg",
         modalId: "sanctum-modal",
@@ -220,8 +231,8 @@ const games = [
         difficulty: "easy",
         platform: "arvi",
         duration: "medium",
-        minPlayers: 3,
-        maxPlayers: 7,
+        minPlayers: 2,
+        maxPlayers: 6,
         description: "Ontdek de geheimen van de oude Maya-tempel.",
         image: "../fotos/new fotos/JungleQuest.jpg",
         modalId: "jungle-modal",
@@ -237,8 +248,8 @@ const games = [
         difficulty: "medium",
         platform: "arvi",
         duration: "short",
-        minPlayers: 3,
-        maxPlayers: 8,
+        minPlayers: 2,
+        maxPlayers: 6,
         description: "Overleef in de wildernis met minimale middelen.",
         image: "../fotos/new fotos/survival.png",
         modalId: "survival-modal",
@@ -255,7 +266,7 @@ const games = [
         platform: "arvi",
         duration: "medium",
         minPlayers: 2,
-        maxPlayers: 6,
+        maxPlayers: 4,
         description: "Val door het konijnenhol in Alice's wonderland.",
         image: "../fotos/new fotos/alice.jpg",
         modalId: "alice-modal",
@@ -271,8 +282,8 @@ const games = [
         difficulty: "medium",
         platform: "arvi",
         duration: "long",
-        minPlayers: 3,
-        maxPlayers: 6,
+        minPlayers: 2,
+        maxPlayers: 4,
         description: "Betreed de verlaten kerncentrale van Chernobyl.",
         image: "../fotos/new fotos/chernobyl.jpg",
         modalId: "chernobyl-modal",
@@ -289,7 +300,7 @@ const games = [
         platform: "arvi",
         duration: "medium",
         minPlayers: 2,
-        maxPlayers: 6,
+        maxPlayers: 4,
         description: "Verlos de vervloekte zielen uit dit nachtmerriehuis.",
         image: "../fotos/new fotos/HOFcursedSouls.jpg",
         modalId: "cursedsouls-modal",
@@ -323,7 +334,7 @@ const games = [
         platform: "ubisoft",
         duration: "medium",
         minPlayers: 2,
-        maxPlayers: 6,
+        maxPlayers: 4,
         description: "Ontdek de geheimen van een oude Egyptische piramide.",
         image: "../fotos/new fotos/escapeTheLostPyramid.png",
         modalId: "pyramid-modal",
@@ -359,8 +370,8 @@ function generateGames() {
     const actieValue = parseInt(document.getElementById('actieSlider').value) * 10;
     const puzzelenValue = parseInt(document.getElementById('puzzelenSlider').value) * 10;
 
-    // Use default player count since slider is missing
-    const playerCount = 4; // Default to 4 players
+    // Get player count from the new slider
+    const playerCount = parseInt(document.getElementById('personenSlider').value);
 
     // Calculate match scores for all games
     const gamesWithScores = games.map(game => {
