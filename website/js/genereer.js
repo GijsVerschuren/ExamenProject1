@@ -375,29 +375,54 @@ function generateGames() {
 
     // Calculate match scores for all games
     const gamesWithScores = games.map(game => {
-        // Check if player count is within range
-        const playerMatch = playerCount >= game.minPlayers && playerCount <= game.maxPlayers;
+        // If 8 or more players, show all games regardless of player limits
+        if (playerCount >= 8) {
+            // Calculate similarity score (0-100)
+            const avontuurDiff = Math.abs(avontuurValue - game.characteristics.avontuur);
+            const actieDiff = Math.abs(actieValue - game.characteristics.actie);
+            const puzzelenDiff = Math.abs(puzzelenValue - game.characteristics.puzzelen);
 
-        if (!playerMatch) {
-            return { ...game, matchScore: 0 }; // No match if player count doesn't fit
-        }        // Calculate similarity score (0-100)
-        const avontuurDiff = Math.abs(avontuurValue - game.characteristics.avontuur);
-        const actieDiff = Math.abs(actieValue - game.characteristics.actie);
-        const puzzelenDiff = Math.abs(puzzelenValue - game.characteristics.puzzelen);
+            // Average difference (lower is better)
+            const averageDiff = (avontuurDiff + actieDiff + puzzelenDiff) / 3;
 
-        // Average difference (lower is better)
-        const averageDiff = (avontuurDiff + actieDiff + puzzelenDiff) / 3;
+            // Convert to percentage match (100 = perfect match, 0 = worst match)
+            const matchScore = Math.max(0, 100 - averageDiff);
 
-        // Convert to percentage match (100 = perfect match, 0 = worst match)
-        const matchScore = Math.max(0, 100 - averageDiff);
+            return { ...game, matchScore };
+        } else {
+            // For less than 8 players, check if player count is within range
+            const playerMatch = playerCount >= game.minPlayers && playerCount <= game.maxPlayers;
 
-        return { ...game, matchScore };
+            if (!playerMatch) {
+                return { ...game, matchScore: 0 }; // No match if player count doesn't fit
+            }
+
+            // Calculate similarity score (0-100)
+            const avontuurDiff = Math.abs(avontuurValue - game.characteristics.avontuur);
+            const actieDiff = Math.abs(actieValue - game.characteristics.actie);
+            const puzzelenDiff = Math.abs(puzzelenValue - game.characteristics.puzzelen);
+
+            // Average difference (lower is better)
+            const averageDiff = (avontuurDiff + actieDiff + puzzelenDiff) / 3;
+
+            // Convert to percentage match (100 = perfect match, 0 = worst match)
+            const matchScore = Math.max(0, 100 - averageDiff);
+
+            return { ...game, matchScore };
+        }
     });
 
-    // Filter out games with 0 score and sort by match score
-    const validGames = gamesWithScores
-        .filter(game => game.matchScore > 0)
-        .sort((a, b) => b.matchScore - a.matchScore);
+    // Filter and sort games based on player count
+    let validGames;
+    if (playerCount >= 8) {
+        // For 8+ players, show all games sorted by match score
+        validGames = gamesWithScores.sort((a, b) => b.matchScore - a.matchScore);
+    } else {
+        // For less than 8 players, filter out games with 0 score and sort by match score
+        validGames = gamesWithScores
+            .filter(game => game.matchScore > 0)
+            .sort((a, b) => b.matchScore - a.matchScore);
+    }
 
     // Take top 6 games (or all if less than 6)
     const topGames = validGames.slice(0, 6);
@@ -412,6 +437,7 @@ function generateGames() {
 function displayResults(games) {
     const resultSection = document.getElementById('resultSection');
     const recommendedGames = document.getElementById('recommendedGames');
+    const playerCount = parseInt(document.getElementById('personenSlider').value);
 
     if (games.length === 0) {
         recommendedGames.innerHTML = `
