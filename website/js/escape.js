@@ -55,8 +55,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 shouldShow = false;
             }
 
-            // Check platform filter (show only if platform is selected, or if no platforms are selected show all)
-            if (selectedPlatforms.length > 0 && !selectedPlatforms.includes(cardPlatform)) {
+            // Check platform filter (hide if platform is selected)
+            if (selectedPlatforms.length > 0 && selectedPlatforms.includes(cardPlatform)) {
                 shouldShow = false;
             }
 
