@@ -135,9 +135,9 @@ body {
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
-    gap: 40px;
-    margin-top: 40px;
-    width: 1000px;
+    gap: 30px;
+    margin-top: 30px;
+    width: 400px;
 }
 
 .option-btn {
@@ -146,8 +146,8 @@ body {
     color: white;
     border: none;
     border-radius: 25px;
-    height: 80px;
-    width: 280px;
+    height: 75px;
+    width: 260px;
     font-size: 1.6em;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     margin: 15px;
@@ -171,4 +171,8 @@ body {
 .option-grid-bottom {
     display: flex;
     justify-content: space-around;
+}
+
+.options-grid {
+    width: 800px;
 }
