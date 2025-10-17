@@ -176,3 +176,175 @@ body {
 .options-grid {
     width: 800px;
 }
+
+/* Multiplayer Game Card Styles */
+.game-card-container {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.multiplayer-game-card {
+    background: #333;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 320px;
+    /* Even thinner - reduced from 400px */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.multiplayer-game-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.8);
+}
+
+.multiplayer-game-card .game-image-container {
+    position: relative;
+    width: 100%;
+    height: 120px;
+    /* Further reduced for ultra-thin rectangular look */
+    overflow: hidden;
+}
+
+.multiplayer-game-card .game-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    /* Ensure image is centered for best crop */
+    transition: transform 0.3s ease;
+}
+
+.multiplayer-game-card:hover .game-image-container img {
+    transform: scale(1.05);
+}
+
+.multiplayer-game-card .game-info {
+    padding: 1rem;
+    /* Further reduced from 1.2rem for ultra-compact look */
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    /* Reduced from 0.8rem */
+}
+
+.multiplayer-game-card .game-title {
+    font-family: "Oswald", sans-serif;
+    font-size: 1.3rem;
+    /* Slightly reduced from 1.4rem */
+    font-weight: 600;
+    color: #FFDD0E;
+    margin-bottom: 0.8rem;
+    /* Reduced from 1rem */
+}
+
+.multiplayer-game-card .game-details {
+    font-family: "Inter", sans-serif;
+    color: #ccc;
+    font-size: 0.9rem;
+    /* Slightly reduced from 0.95rem */
+    line-height: 1.5;
+    /* Slightly reduced from 1.6 */
+    margin-bottom: 1.2rem;
+    /* Reduced from 1.5rem */
+}
+
+.multiplayer-game-card .btn {
+    background: #FFDD0E;
+    color: #000;
+    text-decoration: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.5rem;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    align-self: flex-start;
+}
+
+.multiplayer-game-card .btn:hover {
+    background: #e6c60d;
+    transform: translateY(-1px);
+}
+
+/* Trailer Modal Styles */
+.trailer-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.trailer-modal.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+}
+
+.trailer-content {
+    background: #333;
+    border-radius: 1rem;
+    padding: 2rem;
+    max-width: 80%;
+    max-height: 80%;
+    width: auto;
+    height: auto;
+    position: relative;
+}
+
+.trailer-content .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.trailer-content .modal-title {
+    font-family: "Oswald", sans-serif;
+    color: #FFDD0E;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.trailer-content .close-btn {
+    background: none;
+    border: none;
+    color: #FFDD0E;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.trailer-content .close-btn:hover {
+    color: #ffffff;
+}
+
+.trailer-video {
+    width: 100%;
+    max-width: 800px;
+}
+
+.trailer-video video {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+}
