@@ -22,4 +22,13 @@ document.addEventListener('DOMContentLoaded', function () {
             console.log('Language changed to:', this.dataset.lang);
         });
     });
+    const optionButtons = document.querySelectorAll('.option-btn');
+
+    optionButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            // Toggle selected class
+            this.classList.toggle('selected');
+
+        });
+    });
 });

@@ -129,3 +129,46 @@ body {
 .language-selector.nl-active .language-toggle {
     transform: translateX(76px);
 }
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 40px;
+    width: 1000px;
+}
+
+.option-btn {
+    font-family: "Press Start 2P", system-ui;
+    background-color: #B8A000;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    height: 80px;
+    width: 280px;
+    font-size: 1.6em;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    margin: 15px;
+}
+
+.selected {
+    background-color: #FFDD0E;
+    color: black;
+}
+
+.option-btn:hover {
+    background-color: #FFE03D;
+    transform: translateY(-2px);
+}
+
+.option-grid-top {
+    display: flex;
+    justify-content: space-around;
+}
+
+.option-grid-bottom {
+    display: flex;
+    justify-content: space-around;
+}
