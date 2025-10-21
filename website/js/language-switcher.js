@@ -27,6 +27,31 @@ document.addEventListener('DOMContentLoaded', function () {
             'aanbevolen-spellen': 'Aanbevolen Spellen:',
             'bekijk-alle-spellen': 'Bekijk Alle Spellen',
 
+            // Slider labels
+            'avontuur': 'Avontuur:',
+            'actie': 'Actie:',
+            'puzzelen': 'Puzzelen:',
+            'horror': 'Horror:',
+
+            // Escape room game details
+            'prince-details': 'GAME INFO:<br>2-4 spelers | 60 minuten<br>Avontuurlijke puzzel escape room<br>Ontsnap uit het magische paleis',
+            'huxley-details': 'GAME INFO:<br>2-6 spelers | 44 minuten<br>Sci-fi mysterie escape room<br>Los het geheim van Huxley op',
+            'sigma-details': 'GAME INFO:<br>2-4 spelers | 45 minuten<br>Militaire missie escape room<br>Voltooi de geheime operatie',
+            'christmas-details': 'GAME INFO:<br>2-6 spelers | 60 minuten<br>Kerst thema escape room<br>Red het kerstfeest op tijd',
+            'jungle-details': 'GAME INFO:<br>2-6 spelers | 60 minuten<br>Jungle avontuur escape room<br>Verken de gevaarlijke jungle',
+            'cyberpunk-details': 'GAME INFO:<br>2-4 spelers | 50 minuten<br>Futuristische cyber escape room<br>Hack het systeem en ontsnap',
+            'medusa-details': 'GAME INFO:<br>2-4 spelers | 60 minuten<br>Mythologische avontuur escape room<br>Versla Medusa en ontsnap',
+            'prison-details': 'GAME INFO:<br>2-6 spelers | 60 minuten<br>Gevangenis ontsnapping escape room<br>Plan je ontsnapping zorgvuldig',
+            'houseoffear-details': 'GAME INFO:<br>2-4 spelers | 45 minuten<br>Horror escape room ervaring<br>Overleef het huis van angst',
+            'sanctum-details': 'GAME INFO:<br>2-6 spelers | 60 minuten<br>Mystieke tempel escape room<br>Ontdek de geheimen van het heiligdom',
+            'survival-details': 'GAME INFO:<br>2-4 spelers | 50 minuten<br>Survival horror escape room<br>Overleef in de wildernis',
+            'alice-details': 'GAME INFO:<br>2-6 spelers | 60 minuten<br>Sprookjesachtige escape room<br>Volg Alice naar Wonderland',
+            'chernobyl-details': 'GAME INFO:<br>2-6 spelers | 60 minuten<br>Post-apocalyptische escape room<br>Ontsnap uit de verwoeste zone',
+            'cursedsouls-details': 'GAME INFO:<br>2-4 spelers | 50 minuten<br>Supernatural horror escape room<br>Bevrijdt de vervloekte zielen',
+            'callofblood-details': 'GAME INFO:<br>2-4 spelers | 45 minuten<br>Dark horror escape room<br>Overleef de bloeddorstige roep',
+            'pyramid-details': 'GAME INFO:<br>2-4 spelers | 60 minuten<br>Egyptische piramide escape room<br>Vind de uitgang uit de piramide',
+            'notredame-details': 'GAME INFO:<br>2-4 spelers | 45 minuten<br>Historische escape room<br>Red de Notre Dame kathedraal',
+
             // Multiplayer game details
             'arizona-sunshine-details': '2-4 spelers | 45-90 minuten<br>Co-op zombie shooter in VR<br>Overleef de zombie apocalypse samen<br>Realistische wapens en tactiek<br>Teamwork essentieel voor overleving<br>Intense actie en survival elementen',
             'archer-details': '2-4 spelers | 45-90 minuten<br>Co-op boogschutter in VR<br>Overleef de boogschutter apocalypse samen<br>Realistische wapens en tactiek<br>Teamwork essentieel voor overleving<br>Intense actie en survival elementen',
@@ -87,6 +112,31 @@ document.addEventListener('DOMContentLoaded', function () {
             'genereer-game-btn': 'Generate Game',
             'aanbevolen-spellen': 'Recommended Games:',
             'bekijk-alle-spellen': 'View All Games',
+
+            // Slider labels
+            'avontuur': 'Adventure:',
+            'actie': 'Action:',
+            'puzzelen': 'Puzzles:',
+            'horror': 'Horror:',
+
+            // Escape room game details
+            'prince-details': 'GAME INFO:<br>2-4 players | 60 minutes<br>Adventure puzzle escape room<br>Escape from the magical palace',
+            'huxley-details': 'GAME INFO:<br>2-6 players | 44 minutes<br>Sci-fi mystery escape room<br>Solve the secret of Huxley',
+            'sigma-details': 'GAME INFO:<br>2-4 players | 45 minutes<br>Military mission escape room<br>Complete the secret operation',
+            'christmas-details': 'GAME INFO:<br>2-6 players | 60 minutes<br>Christmas themed escape room<br>Save Christmas on time',
+            'jungle-details': 'GAME INFO:<br>2-6 players | 60 minutes<br>Jungle adventure escape room<br>Explore the dangerous jungle',
+            'cyberpunk-details': 'GAME INFO:<br>2-4 players | 50 minutes<br>Futuristic cyber escape room<br>Hack the system and escape',
+            'medusa-details': 'GAME INFO:<br>2-4 players | 60 minutes<br>Mythological adventure escape room<br>Defeat Medusa and escape',
+            'prison-details': 'GAME INFO:<br>2-6 players | 60 minutes<br>Prison escape room<br>Plan your escape carefully',
+            'houseoffear-details': 'GAME INFO:<br>2-4 players | 45 minutes<br>Horror escape room experience<br>Survive the house of fear',
+            'sanctum-details': 'GAME INFO:<br>2-6 players | 60 minutes<br>Mystical temple escape room<br>Discover the sanctuary secrets',
+            'survival-details': 'GAME INFO:<br>2-4 players | 50 minutes<br>Survival horror escape room<br>Survive in the wilderness',
+            'alice-details': 'GAME INFO:<br>2-6 players | 60 minutes<br>Fairy tale escape room<br>Follow Alice to Wonderland',
+            'chernobyl-details': 'GAME INFO:<br>2-6 players | 60 minutes<br>Post-apocalyptic escape room<br>Escape from the devastated zone',
+            'cursedsouls-details': 'GAME INFO:<br>2-4 players | 50 minutes<br>Supernatural horror escape room<br>Free the cursed souls',
+            'callofblood-details': 'GAME INFO:<br>2-4 players | 45 minutes<br>Dark horror escape room<br>Survive the bloodthirsty call',
+            'pyramid-details': 'GAME INFO:<br>2-4 players | 60 minutes<br>Egyptian pyramid escape room<br>Find the exit from the pyramid',
+            'notredame-details': 'GAME INFO:<br>2-4 players | 45 minutes<br>Historical escape room<br>Save the Notre Dame cathedral',
 
             // Multiplayer game details
             'arizona-sunshine-details': '2-4 players | 45-90 minutes<br>Co-op zombie shooter in VR<br>Survive the zombie apocalypse together<br>Realistic weapons and tactics<br>Teamwork essential for survival<br>Intense action and survival elements',
@@ -175,6 +225,32 @@ document.addEventListener('DOMContentLoaded', function () {
             stelErvaring.textContent = translations[lang]['stel-ervaring'];
         }
 
+        // Update slider labels (generator and escape page)
+        document.querySelectorAll('.slider-group label').forEach(label => {
+            const text = label.textContent.toLowerCase().trim();
+            if (text.includes('avontuur') || text.includes('adventure')) {
+                label.textContent = translations[lang]['avontuur'];
+            } else if (text.includes('actie') || text.includes('action')) {
+                label.textContent = translations[lang]['actie'];
+            } else if (text.includes('puzzelen') || text.includes('puzzel') || text.includes('puzzle')) {
+                label.textContent = translations[lang]['puzzelen'];
+            } else if (text.includes('horror')) {
+                label.textContent = translations[lang]['horror'];
+            }
+        });
+
+        // Update slider labels with class (escape page)
+        document.querySelectorAll('.slider-label').forEach(label => {
+            const text = label.textContent.toLowerCase().trim();
+            if (text.includes('avontuur') || text.includes('adventure')) {
+                label.textContent = translations[lang]['avontuur'].replace(':', '');
+            } else if (text.includes('actie') || text.includes('action')) {
+                label.textContent = translations[lang]['actie'].replace(':', '');
+            } else if (text.includes('puzzelen') || text.includes('puzzel') || text.includes('puzzle')) {
+                label.textContent = translations[lang]['puzzelen'].replace(':', '');
+            }
+        });
+
         // Update option buttons (multiplayer page)
         document.querySelectorAll('.option-btn').forEach(btn => {
             const key = btn.classList[1]; // Get the second class name
@@ -193,6 +269,52 @@ document.addEventListener('DOMContentLoaded', function () {
 
             if (gameKeys[index] && translations[lang][gameKeys[index]]) {
                 details.innerHTML = translations[lang][gameKeys[index]];
+            }
+        });
+
+        // Update escape room game details (escape page)
+        document.querySelectorAll('.game-card .game-details').forEach(details => {
+            const gameCard = details.closest('.game-card');
+            if (!gameCard) return;
+
+            const gameTitle = gameCard.querySelector('.game-title')?.textContent.toLowerCase();
+            if (!gameTitle) return;
+
+            // Map game titles to detail keys
+            if (gameTitle.includes('prince') || gameTitle.includes('persia')) {
+                details.innerHTML = translations[lang]['prince-details'];
+            } else if (gameTitle.includes('huxley')) {
+                details.innerHTML = translations[lang]['huxley-details'];
+            } else if (gameTitle.includes('sigma')) {
+                details.innerHTML = translations[lang]['sigma-details'];
+            } else if (gameTitle.includes('christmas')) {
+                details.innerHTML = translations[lang]['christmas-details'];
+            } else if (gameTitle.includes('jungle')) {
+                details.innerHTML = translations[lang]['jungle-details'];
+            } else if (gameTitle.includes('cyberpunk')) {
+                details.innerHTML = translations[lang]['cyberpunk-details'];
+            } else if (gameTitle.includes('medusa')) {
+                details.innerHTML = translations[lang]['medusa-details'];
+            } else if (gameTitle.includes('prison')) {
+                details.innerHTML = translations[lang]['prison-details'];
+            } else if (gameTitle.includes('house of fear') && !gameTitle.includes('cursed') && !gameTitle.includes('call')) {
+                details.innerHTML = translations[lang]['houseoffear-details'];
+            } else if (gameTitle.includes('sanctum')) {
+                details.innerHTML = translations[lang]['sanctum-details'];
+            } else if (gameTitle.includes('survival')) {
+                details.innerHTML = translations[lang]['survival-details'];
+            } else if (gameTitle.includes('alice')) {
+                details.innerHTML = translations[lang]['alice-details'];
+            } else if (gameTitle.includes('chernobyl')) {
+                details.innerHTML = translations[lang]['chernobyl-details'];
+            } else if (gameTitle.includes('cursed souls')) {
+                details.innerHTML = translations[lang]['cursedsouls-details'];
+            } else if (gameTitle.includes('call of blood')) {
+                details.innerHTML = translations[lang]['callofblood-details'];
+            } else if (gameTitle.includes('pyramid')) {
+                details.innerHTML = translations[lang]['pyramid-details'];
+            } else if (gameTitle.includes('notre dame')) {
+                details.innerHTML = translations[lang]['notredame-details'];
             }
         });
 
@@ -248,4 +370,7 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         });
     }
+
+    // Initialize with Dutch as default language
+    updateLanguage('nl');
 });
