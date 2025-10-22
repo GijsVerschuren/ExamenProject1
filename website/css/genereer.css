@@ -521,9 +521,9 @@ body {
     padding: 0.8rem 1.5rem;
     text-decoration: none;
     border-radius: 0.5rem;
-    font-family: "Inter", sans-serif;
-    font-weight: 600;
-    font-size: 0.9rem;
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-size: 0.7rem;
     transition: all 0.2s ease;
     border: none;
     cursor: pointer;
