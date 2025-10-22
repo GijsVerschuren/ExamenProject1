@@ -26,6 +26,8 @@ document.addEventListener('DOMContentLoaded', function () {
             'genereer-game-btn': 'Genereer Spel',
             'aanbevolen-spellen': 'Aanbevolen Spellen:',
             'bekijk-alle-spellen': 'Bekijk Alle Spellen',
+            'aantal-personen': 'Aantal personen:',
+            'vind-passende-spellen': 'Vind passende spellen',
 
             // Slider labels
             'avontuur': 'Avontuur:',
@@ -112,6 +114,8 @@ document.addEventListener('DOMContentLoaded', function () {
             'genereer-game-btn': 'Generate Game',
             'aanbevolen-spellen': 'Recommended Games:',
             'bekijk-alle-spellen': 'View All Games',
+            'aantal-personen': 'Number of people:',
+            'vind-passende-spellen': 'Find matching games',
 
             // Slider labels
             'avontuur': 'Adventure:',
@@ -211,12 +215,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Update generator page elements
         const genereerTitle = document.querySelector('.header h1');
-        if (genereerTitle && genereerTitle.textContent.includes('Genereer')) {
+        if (genereerTitle && (genereerTitle.textContent.includes('Genereer') || genereerTitle.textContent.includes('Generate'))) {
             genereerTitle.textContent = translations[lang]['genereer-title'];
         }
 
         const genereerSubtitle = document.querySelector('.header p');
-        if (genereerSubtitle && genereerSubtitle.textContent.includes('escape room')) {
+        if (genereerSubtitle && (genereerSubtitle.textContent.includes('escape room') || genereerSubtitle.textContent.includes('preferences'))) {
             genereerSubtitle.textContent = translations[lang]['genereer-subtitle'];
         }
 
@@ -224,6 +228,22 @@ document.addEventListener('DOMContentLoaded', function () {
         if (stelErvaring) {
             stelErvaring.textContent = translations[lang]['stel-ervaring'];
         }
+
+        // Update aantal personen label
+        document.querySelectorAll('label').forEach(label => {
+            const text = label.textContent.toLowerCase().trim();
+            if (text.includes('aantal personen') || text.includes('number of people')) {
+                label.textContent = translations[lang]['aantal-personen'];
+            }
+        });
+
+        // Update "vind passende spellen" button
+        document.querySelectorAll('button').forEach(button => {
+            const text = button.textContent.toLowerCase().trim();
+            if (text.includes('vind passende spellen') || text.includes('find matching games')) {
+                button.textContent = translations[lang]['vind-passende-spellen'];
+            }
+        });
 
         // Update slider labels (generator and escape page)
         document.querySelectorAll('.slider-group label').forEach(label => {
