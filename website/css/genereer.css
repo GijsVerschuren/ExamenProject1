@@ -54,6 +54,11 @@ body {
     transition: background-color 0.2s ease;
 }
 
+.back-btn svg {
+    width: 50px;
+    height: 50px;
+}
+
 .back-btn:hover {
     background-color: rgba(255, 221, 14, 0.1);
 }
@@ -457,8 +462,10 @@ body {
     margin-left: 1rem;
     -webkit-appearance: none;
     appearance: none;
-    background: transparent;
     cursor: pointer;
+    border-radius: 10px;
+    background: linear-gradient(to right, #FFDD0E 0%, #FFDD0E var(--range-progress, 0%), #666 var(--range-progress, 0%), #666 100%);
+    height: 6px;
 }
 
 /* Webkit browsers (Chrome, Safari, Edge) */
