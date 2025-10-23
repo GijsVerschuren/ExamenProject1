@@ -408,6 +408,22 @@ body {
     font-size: 0.8rem;
 }
 
+.btn.christmas {
+    margin-top: 20px;
+}
+
+.btn.prison {
+    margin-top: 20px;
+}
+
+.btn.survival {
+    margin-top: 20px;
+}
+
+.btn.notreDame {
+    margin-top: 20px;
+}
+
 .btn:hover {
     background: #FFE03D;
 }
