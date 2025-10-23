@@ -38,16 +38,17 @@
 
     <div class="container">
         <div class="header">
-            <h1>Genereer Jouw Perfecte Spel</h1>
-            <p>Laat ons een escape room ervaring voor jou selecteren op basis van jouw voorkeuren</p>
+            <h1 data-i18n="genereer-title">Genereer Jouw Perfecte Spel</h1>
+            <p data-i18n="genereer-subtitle">Laat ons een escape room ervaring voor jou selecteren op basis van jouw
+                voorkeuren</p>
         </div>
 
         <div class="generator-content">
             <div class="preference-section">
-                <h2>Stel je gewenste spelervaring in</h2>
+                <h2 data-i18n="stel-ervaring">Stel je gewenste spelervaring in</h2>
 
                 <div class="slider-group">
-                    <label>Avontuur:</label>
+                    <label data-i18n="avontuur">Avontuur:</label>
                     <div class="slider-container">
                         <input type="range" id="avontuurSlider" min="0" max="10" value="5" class="game-slider">
                         <div class="slider-labels">
@@ -59,7 +60,7 @@
                 </div>
 
                 <div class="slider-group">
-                    <label>Actie:</label>
+                    <label data-i18n="actie">Actie:</label>
                     <div class="slider-container">
                         <input type="range" id="actieSlider" min="0" max="10" value="5" class="game-slider">
                         <div class="slider-labels">
@@ -71,7 +72,7 @@
                 </div>
 
                 <div class="slider-group">
-                    <label>Puzzelen:</label>
+                    <label data-i18n="puzzelen">Puzzelen:</label>
                     <div class="slider-container">
                         <input type="range" id="puzzelenSlider" min="0" max="10" value="5" class="game-slider">
                         <div class="slider-labels">
@@ -83,7 +84,7 @@
                 </div>
 
                 <div class="slider-group">
-                    <label>Aantal Personen:</label>
+                    <label data-i18n="aantal-personen">Aantal Personen:</label>
                     <div class="slider-container">
                         <input type="range" id="personenSlider" min="2" max="10" step="2" value="4" class="game-slider">
                         <div class="slider-labels">
@@ -96,7 +97,7 @@
             </div>
 
             <div class="generate-section">
-                <button class="generate-game-btn" onclick="generateGames()">
+                <button class="generate-game-btn" onclick="generateGames()" data-i18n="vind-passende-spellen">
                     Vind Passende Spellen
                 </button>
             </div>
@@ -105,11 +106,12 @@
                 <button class="collapse-toggle" id="collapseToggle" onclick="togglePreferences()">
                     Toon Instellingen
                 </button>
-                <h2>Aanbevolen Spellen:</h2>
+                <h2 data-i18n="aanbevolen-spellen">Aanbevolen Spellen:</h2>
                 <div class="recommended-games" id="recommendedGames">
                     <!-- Generated games will appear here -->
                 </div>
-                <button class="play-btn" onclick="goToEscapeRooms()">Bekijk Alle Spellen</button>
+                <button class="play-btn" onclick="goToEscapeRooms()" data-i18n="bekijk-alle-spellen">Bekijk Alle
+                    Spellen</button>
             </div>
         </div>
     </div>
@@ -124,20 +126,23 @@
             <div class="modal-body">
                 <div class="modal-section">
                     <h3>Verhaal</h3>
-                    <p>Stap in de wereld van Prince of Persia en ontdek de krachten van de Dolk van de Tijd. Reis door
-                        mystieke landen en los puzzels op in deze meeslepende escape room ervaring.</p>
+                    <p>
+                        Jullie worden opgeroepen door Keileena om de kwade magiër te stoppen met de Dagger of Time.
+                        Reis door betoverde paleizen, los uitdagende puzzels op en voorkom dat de tijd zelf uit de hand
+                        loopt.
+                    </p>
                 </div>
                 <div class="modal-section">
                     <h3>Speeltijd</h3>
-                    <p>60-90 minuten</p>
+                    <p>60 minuten</p>
                 </div>
                 <div class="modal-section">
                     <h3>Spelers</h3>
-                    <p>2-6 spelers</p>
+                    <p>2 of 4 spelers</p>
                 </div>
                 <div class="modal-section">
-                    <h3>Moeilijkheid</h3>
-                    <p>Moeilijk</p>
+                    <h3>Leeftijd</h3>
+                    <p>12+ jaar</p>
                 </div>
             </div>
         </div>
@@ -152,20 +157,22 @@
             <div class="modal-body">
                 <div class="modal-section">
                     <h3>Verhaal</h3>
-                    <p>Een dystopische toekomst waar technologie de overhand heeft genomen. Werk samen om de mensheid te
-                        redden van de AI overheersing.</p>
+                    <p>
+                        Het jaar is 3007. mensheid is dood, jullie zijn de enige overlevende.
+                        Jullie taak is om Huxley te helpen en de apocalypse terug te draaien.
+                    </p>
                 </div>
                 <div class="modal-section">
                     <h3>Speeltijd</h3>
-                    <p>60 minuten</p>
+                    <p>50-60 minuten</p>
                 </div>
                 <div class="modal-section">
                     <h3>Spelers</h3>
-                    <p>2-6 spelers</p>
+                    <p>2-4 spelers</p>
                 </div>
                 <div class="modal-section">
-                    <h3>Moeilijkheid</h3>
-                    <p>Medium</p>
+                    <h3>Leeftijd</h3>
+                    <p>12+ jaar</p>
                 </div>
             </div>
         </div>
@@ -180,20 +187,23 @@
             <div class="modal-body">
                 <div class="modal-section">
                     <h3>Verhaal</h3>
-                    <p>Een geheime missie in het hart van de vijandelijke basis. Infiltreer de basis en voltooi de
-                        missie voordat jullie ontdekt worden.</p>
+                    <p>
+                        Jullie zijn elite soldaten die op een geheime missie zijn gestuurd om een bom te ontmantelen.
+                        Werk samen om aanwijzingen te vinden, puzzels op te lossen en de bom te ontmantelen voordat het
+                        te laat is.
+                    </p>
                 </div>
                 <div class="modal-section">
                     <h3>Speeltijd</h3>
-                    <p>45-60 minuten</p>
+                    <p>60 minuten</p>
                 </div>
                 <div class="modal-section">
                     <h3>Spelers</h3>
-                    <p>4-6 spelers</p>
+                    <p>2-6 spelers</p>
                 </div>
                 <div class="modal-section">
-                    <h3>Moeilijkheid</h3>
-                    <p>Makkelijk</p>
+                    <h3>Leeftijd</h3>
+                    <p>13+ jaar</p>
                 </div>
             </div>
         </div>
@@ -208,20 +218,22 @@
             <div class="modal-body">
                 <div class="modal-section">
                     <h3>Verhaal</h3>
-                    <p>Een spookachtig huis vol geheimen en griezelige verassingen. Ontdek de donkere geschiedenis van
-                        dit vervloekte huis en ontsnap voordat het te laat is.</p>
+                    <p>
+                        Een verlaten huis in het bos. Je loopt naar binnen en voordat je het weet zit je vast.
+                        Kunnen jullie erachter komen wat er echt in dit huis gebeurt en ontsnappen?
+                    </p>
                 </div>
                 <div class="modal-section">
                     <h3>Speeltijd</h3>
-                    <p>30-45 minuten</p>
+                    <p>45-60 minuten</p>
                 </div>
                 <div class="modal-section">
                     <h3>Spelers</h3>
-                    <p>2-6 spelers</p>
+                    <p>2-4 spelers</p>
                 </div>
                 <div class="modal-section">
-                    <h3>Moeilijkheid</h3>
-                    <p>Makkelijk</p>
+                    <h3>Leeftijd</h3>
+                    <p>16+ jaar</p>
                 </div>
             </div>
         </div>
@@ -236,20 +248,22 @@
             <div class="modal-body">
                 <div class="modal-section">
                     <h3>Verhaal</h3>
-                    <p>Help de Kerstman zijn verdwenen cadeaus terug te vinden in deze festieve escape room ervaring vol
-                        kerstmagie.</p>
+                    <p>
+                        Kerstmis is in gevaar! De kerstman is in een sneeuwstorm terechtgekomen.
+                        Het is aan jullie om de kerstman te redden.
+                    </p>
                 </div>
                 <div class="modal-section">
                     <h3>Speeltijd</h3>
-                    <p>30-45 minuten</p>
+                    <p>45-60 minuten</p>
                 </div>
                 <div class="modal-section">
                     <h3>Spelers</h3>
-                    <p>2-8 spelers</p>
+                    <p>2-6 spelers</p>
                 </div>
                 <div class="modal-section">
-                    <h3>Moeilijkheid</h3>
-                    <p>Makkelijk</p>
+                    <h3>Leeftijd</h3>
+                    <p>10+ jaar</p>
                 </div>
             </div>
         </div>
@@ -264,7 +278,9 @@
             <div class="modal-body">
                 <div class="modal-section">
                     <h3>Verhaal</h3>
-                    <p>Betreed de mystieke wereld van het oude Griekenland en ontdek de geheimen van Medusa's poort.</p>
+                    <p>
+                        Vind jullie weg uit de Aegean grot waar het legendarische schip van de Argonauts ligt.
+                    </p>
                 </div>
                 <div class="modal-section">
                     <h3>Speeltijd</h3>
@@ -272,11 +288,11 @@
                 </div>
                 <div class="modal-section">
                     <h3>Spelers</h3>
-                    <p>2-4 spelers</p>
+                    <p>2 of 4 spelers</p>
                 </div>
                 <div class="modal-section">
-                    <h3>Moeilijkheid</h3>
-                    <p>Medium</p>
+                    <h3>Leeftijd</h3>
+                    <p>12+ jaar</p>
                 </div>
             </div>
         </div>
@@ -291,8 +307,10 @@
             <div class="modal-body">
                 <div class="modal-section">
                     <h3>Verhaal</h3>
-                    <p>Plan jullie ontsnapping uit een maximum security gevangenis. Gebruik strategie en teamwork om
-                        vrij te komen.</p>
+                    <p>
+                        Jullie zijn onterecht in de gevangenis gezet.
+                        Gelukkig zijn je vrienden nog vrij. Werk samen om te ontsnappen en de echte dader te vinden.
+                    </p>
                 </div>
                 <div class="modal-section">
                     <h3>Speeltijd</h3>
@@ -300,11 +318,11 @@
                 </div>
                 <div class="modal-section">
                     <h3>Spelers</h3>
-                    <p>3-6 spelers</p>
+                    <p>2-6 spelers</p>
                 </div>
                 <div class="modal-section">
-                    <h3>Moeilijkheid</h3>
-                    <p>Moeilijk</p>
+                    <h3>Leeftijd</h3>
+                    <p>13+ jaar</p>
                 </div>
             </div>
         </div>
@@ -319,20 +337,22 @@
             <div class="modal-body">
                 <div class="modal-section">
                     <h3>Verhaal</h3>
-                    <p>Infiltreer de futuristische megacorporatie in deze high-tech cyberpunk wereld vol hacken en
-                        gevaar.</p>
+                    <p>
+                        Het is het begin van de 22ste eeuw. Sameneleving valt uit elkaar door alle technologie.
+                        Jullie zijn een groep cyborgs die een overval moeten plegen om belangrijke data te stelen.
+                    </p>
                 </div>
                 <div class="modal-section">
                     <h3>Speeltijd</h3>
-                    <p>75-90 minuten</p>
+                    <p>60 minuten</p>
                 </div>
                 <div class="modal-section">
                     <h3>Spelers</h3>
-                    <p>4-6 spelers</p>
+                    <p>2-6 spelers</p>
                 </div>
                 <div class="modal-section">
-                    <h3>Moeilijkheid</h3>
-                    <p>Moeilijk</p>
+                    <h3>Leeftijd</h3>
+                    <p>10+ jaar</p>
                 </div>
             </div>
         </div>
@@ -347,8 +367,10 @@
             <div class="modal-body">
                 <div class="modal-section">
                     <h3>Verhaal</h3>
-                    <p>Betreed het heilige sanctuarium waar oude krachten heersen. Los mystieke puzzels op om te
-                        ontsnappen.</p>
+                    <p>
+                        Je vriend is verdwenen in een verlaten huis.
+                        Treedt toe in de wereld van H.P. Lovecraft en vind het mysterie om je vriend te redden.
+                    </p>
                 </div>
                 <div class="modal-section">
                     <h3>Speeltijd</h3>
@@ -359,8 +381,8 @@
                     <p>2-6 spelers</p>
                 </div>
                 <div class="modal-section">
-                    <h3>Moeilijkheid</h3>
-                    <p>Moeilijk</p>
+                    <h3>Leeftijd</h3>
+                    <p>16+ jaar</p>
                 </div>
             </div>
         </div>
@@ -375,20 +397,22 @@
             <div class="modal-body">
                 <div class="modal-section">
                     <h3>Verhaal</h3>
-                    <p>Ontdek de geheimen van de oude Maya-tempel diep in de jungle. Een avontuurlijke expeditie vol
-                        ontdekkingen.</p>
+                    <p>
+                        Een raar portaal heeft jullie naar een mysterieus jungle eiland gebracht.
+                        los de puzzels van de jungle op en vind de uitgang.
+                    </p>
                 </div>
                 <div class="modal-section">
                     <h3>Speeltijd</h3>
-                    <p>60 minuten</p>
+                    <p>45-60 minuten</p>
                 </div>
                 <div class="modal-section">
                     <h3>Spelers</h3>
-                    <p>3-7 spelers</p>
+                    <p>2-6 spelers</p>
                 </div>
                 <div class="modal-section">
-                    <h3>Moeilijkheid</h3>
-                    <p>Makkelijk</p>
+                    <h3>Leeftijd</h3>
+                    <p>10+ jaar</p>
                 </div>
             </div>
         </div>
@@ -403,20 +427,22 @@
             <div class="modal-body">
                 <div class="modal-section">
                     <h3>Verhaal</h3>
-                    <p>Overleef in de wildernis met minimale middelen. Test je overlevingsinstincten in deze intense
-                        ervaring.</p>
+                    <p>
+                        Na een vliegtuigongeluk zijn jullie gestrand op een onbewoond eiland.
+                        Werk samen om te overleven en een manier te vinden om te ontsnappen.
+                    </p>
                 </div>
                 <div class="modal-section">
                     <h3>Speeltijd</h3>
-                    <p>45 minuten</p>
+                    <p>45-70 minuten</p>
                 </div>
                 <div class="modal-section">
                     <h3>Spelers</h3>
-                    <p>3-8 spelers</p>
+                    <p>2-6 spelers</p>
                 </div>
                 <div class="modal-section">
-                    <h3>Moeilijkheid</h3>
-                    <p>Medium</p>
+                    <h3>Leeftijd</h3>
+                    <p>10+ jaar</p>
                 </div>
             </div>
         </div>
@@ -431,20 +457,23 @@
             <div class="modal-body">
                 <div class="modal-section">
                     <h3>Verhaal</h3>
-                    <p>Val door het konijnenhol in Alice's wonderland. Een surreële ervaring vol onmogelijke puzzels.
+                    <p>
+                        Kijk door de ogen van Alice en stop de harten koningin in de wonderlijke wereld van Alice in
+                        Wonderland.
+                        Los puzzels op en stop de harten koningin.
                     </p>
                 </div>
                 <div class="modal-section">
                     <h3>Speeltijd</h3>
-                    <p>60 minuten</p>
+                    <p>50-60 minuten</p>
                 </div>
                 <div class="modal-section">
                     <h3>Spelers</h3>
                     <p>2-6 spelers</p>
                 </div>
                 <div class="modal-section">
-                    <h3>Moeilijkheid</h3>
-                    <p>Medium</p>
+                    <h3>Leeftijd</h3>
+                    <p>13+ jaar</p>
                 </div>
             </div>
         </div>
@@ -459,20 +488,22 @@
             <div class="modal-body">
                 <div class="modal-section">
                     <h3>Verhaal</h3>
-                    <p>Betreed de verlaten kerncentrale van Chernobyl. Een post-apocalyptische ervaring vol gevaar en
-                        mysterie.</p>
+                    <p>
+                        Reis terug in de tijd naar de ramp van chernobyl.
+                        Los puzzels op en stop het ongeluk voordat het te laat is.
+                    </p>
                 </div>
                 <div class="modal-section">
                     <h3>Speeltijd</h3>
-                    <p>75-90 minuten</p>
+                    <p>60 minuten</p>
                 </div>
                 <div class="modal-section">
                     <h3>Spelers</h3>
-                    <p>3-6 spelers</p>
+                    <p>2-6 spelers</p>
                 </div>
                 <div class="modal-section">
-                    <h3>Moeilijkheid</h3>
-                    <p>Medium</p>
+                    <h3>Leeftijd</h3>
+                    <p>13+ jaar</p>
                 </div>
             </div>
         </div>
@@ -487,7 +518,10 @@
             <div class="modal-body">
                 <div class="modal-section">
                     <h3>Verhaal</h3>
-                    <p>Verlos de vervloekte zielen uit dit nachtmerriehuis. Een bovennatuurlijke horror ervaring.</p>
+                    <p>
+                        Een verlaten huis. Op een dag heeft een gek iedereen in het huis vermoord.
+                        Jullie horen de stemmen van de kinderen nog in het huis. treedt binnen en los het mysterie op.
+                    </p>
                 </div>
                 <div class="modal-section">
                     <h3>Speeltijd</h3>
@@ -495,11 +529,11 @@
                 </div>
                 <div class="modal-section">
                     <h3>Spelers</h3>
-                    <p>2-6 spelers</p>
+                    <p>2-4 spelers</p>
                 </div>
                 <div class="modal-section">
-                    <h3>Moeilijkheid</h3>
-                    <p>Medium</p>
+                    <h3>Leeftijd</h3>
+                    <p>16+ jaar</p>
                 </div>
             </div>
         </div>
@@ -514,19 +548,22 @@
             <div class="modal-body">
                 <div class="modal-section">
                     <h3>Verhaal</h3>
-                    <p>De ultieme horror ervaring in het House of Fear. Een intense en angstaanjagende uitdaging.</p>
+                    <p>
+                        Jullie zijn op zoek naar de verdwenen kinderen van de psychiatrische afdeling.
+                        Treedt binnen in het huis en los het mysterie op voordat het te laat is.
+                    </p>
                 </div>
                 <div class="modal-section">
                     <h3>Speeltijd</h3>
-                    <p>75-90 minuten</p>
+                    <p>60 minuten</p>
                 </div>
                 <div class="modal-section">
                     <h3>Spelers</h3>
                     <p>2-4 spelers</p>
                 </div>
                 <div class="modal-section">
-                    <h3>Moeilijkheid</h3>
-                    <p>Medium</p>
+                    <h3>Leeftijd</h3>
+                    <p>16+ jaar</p>
                 </div>
             </div>
         </div>
@@ -541,20 +578,22 @@
             <div class="modal-body">
                 <div class="modal-section">
                     <h3>Verhaal</h3>
-                    <p>Ontdek de geheimen van een oude Egyptische piramide. Los hiërogliefenpuzzels op en ontsnap uit de
-                        verloren piramide.</p>
+                    <p>
+                        Stap in de wereld van Assassin's Creed en vind de weg uit de pyramide van Nebka.
+                        Veel hebben het geprobeerd, maar weinigen zijn geslaagd.
+                    </p>
                 </div>
                 <div class="modal-section">
                     <h3>Speeltijd</h3>
-                    <p>60 minuten</p>
+                    <p>50-60 minuten</p>
                 </div>
                 <div class="modal-section">
                     <h3>Spelers</h3>
-                    <p>2-6 spelers</p>
+                    <p>2 of 4 spelers</p>
                 </div>
                 <div class="modal-section">
-                    <h3>Moeilijkheid</h3>
-                    <p>Makkelijk</p>
+                    <h3>Leeftijd</h3>
+                    <p>10+ jaar</p>
                 </div>
             </div>
         </div>
@@ -569,20 +608,22 @@
             <div class="modal-body">
                 <div class="modal-section">
                     <h3>Verhaal</h3>
-                    <p>Red de Notre Dame van de verwoestende brand. Een race tegen de klok om het historische monument
-                        te redden.</p>
+                    <p>
+                        Wordt een brandweerman in parijs en redt de juwelen van de Notre Dame.
+                        Ontsnap de vlammen en redt de juwelen.
+                    </p>
                 </div>
                 <div class="modal-section">
                     <h3>Speeltijd</h3>
-                    <p>45 minuten</p>
+                    <p>45-60 minuten</p>
                 </div>
                 <div class="modal-section">
                     <h3>Spelers</h3>
-                    <p>2-4 spelers</p>
+                    <p>2 of 4 spelers</p>
                 </div>
                 <div class="modal-section">
-                    <h3>Moeilijkheid</h3>
-                    <p>Medium</p>
+                    <h3>Leeftijd</h3>
+                    <p>12+ jaar</p>
                 </div>
             </div>
         </div>

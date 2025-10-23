@@ -35,24 +35,24 @@ document.addEventListener('DOMContentLoaded', function () {
             'puzzelen': 'Puzzelen:',
             'horror': 'Horror:',
 
-            // Escape room game details
-            'prince-details': 'GAME INFO:<br>2-4 spelers | 60 minuten<br>Avontuurlijke puzzel escape room<br>Ontsnap uit het magische paleis',
-            'huxley-details': 'GAME INFO:<br>2-6 spelers | 44 minuten<br>Sci-fi mysterie escape room<br>Los het geheim van Huxley op',
-            'sigma-details': 'GAME INFO:<br>2-4 spelers | 45 minuten<br>Militaire missie escape room<br>Voltooi de geheime operatie',
-            'christmas-details': 'GAME INFO:<br>2-6 spelers | 60 minuten<br>Kerst thema escape room<br>Red het kerstfeest op tijd',
-            'jungle-details': 'GAME INFO:<br>2-6 spelers | 60 minuten<br>Jungle avontuur escape room<br>Verken de gevaarlijke jungle',
-            'cyberpunk-details': 'GAME INFO:<br>2-4 spelers | 50 minuten<br>Futuristische cyber escape room<br>Hack het systeem en ontsnap',
-            'medusa-details': 'GAME INFO:<br>2-4 spelers | 60 minuten<br>Mythologische avontuur escape room<br>Versla Medusa en ontsnap',
-            'prison-details': 'GAME INFO:<br>2-6 spelers | 60 minuten<br>Gevangenis ontsnapping escape room<br>Plan je ontsnapping zorgvuldig',
-            'houseoffear-details': 'GAME INFO:<br>2-4 spelers | 45 minuten<br>Horror escape room ervaring<br>Overleef het huis van angst',
-            'sanctum-details': 'GAME INFO:<br>2-6 spelers | 60 minuten<br>Mystieke tempel escape room<br>Ontdek de geheimen van het heiligdom',
-            'survival-details': 'GAME INFO:<br>2-4 spelers | 50 minuten<br>Survival horror escape room<br>Overleef in de wildernis',
-            'alice-details': 'GAME INFO:<br>2-6 spelers | 60 minuten<br>Sprookjesachtige escape room<br>Volg Alice naar Wonderland',
-            'chernobyl-details': 'GAME INFO:<br>2-6 spelers | 60 minuten<br>Post-apocalyptische escape room<br>Ontsnap uit de verwoeste zone',
-            'cursedsouls-details': 'GAME INFO:<br>2-4 spelers | 50 minuten<br>Supernatural horror escape room<br>Bevrijdt de vervloekte zielen',
-            'callofblood-details': 'GAME INFO:<br>2-4 spelers | 45 minuten<br>Dark horror escape room<br>Overleef de bloeddorstige roep',
-            'pyramid-details': 'GAME INFO:<br>2-4 spelers | 60 minuten<br>Egyptische piramide escape room<br>Vind de uitgang uit de piramide',
-            'notredame-details': 'GAME INFO:<br>2-4 spelers | 45 minuten<br>Historische escape room<br>Red de Notre Dame kathedraal',
+            // Escape room game details - using exact text from escape.html
+            'prince-details': 'GAME INFO:<br>2 of 4 spelers | 60 minuten<br>Avontuurlijke puzzel escape room<br>Stop de kwaadaardige magiër',
+            'huxley-details': 'GAME INFO:<br>2-4 spelers | 60 minuten<br>Sci-fi mysterie escape room<br>Red Huxley in het jaar 3007',
+            'sigma-details': 'GAME INFO:<br>2-6 spelers | 60 minuten<br>millitaire missie escape room<br>Ontmantel de bom en ontsnap',
+            'christmas-details': 'GAME INFO:<br>2-6 spelers | 60 minuten<br>kerst thema escape room<br>Help de kerstman alle cadeau\'s op tijd te bezorgen',
+            'jungle-details': 'GAME INFO:<br>2-6 spelers | 60 minuten<br>Ontsnap uit de jungle escape room.<br>Ontdek de geheimen van de jungle en vind de uitgang.',
+            'cyberpunk-details': 'GAME INFO:<br>2-6 spelers | 60 minuten<br>Overval escape room.<br>Plan een overval om belangrijke data te stelen in de toekomst.',
+            'medusa-details': 'GAME INFO:<br>2 of 4 spelers | 60 minuten<br>griekse mythologie escape room<br>Ontsnap uit de grot waar het legendarische schip van de argonauts ligt.',
+            'prison-details': 'GAME INFO:<br>2-6 spelers | 60 minuten<br>Ontsnap uit de gevangenis escape room.<br>Ontsnap de gevangenis en pak de echte dader.',
+            'houseoffear-details': 'GAME INFO:<br>2-4 spelers | 60 minuten<br>Behekst huis escape room.<br>Kan jij erachter komen wat er echt in dit verlaten huis gebeurt?',
+            'sanctum-details': 'GAME INFO:<br>2-6 spelers | 60 minuten<br>Red je vriend in het verlaten huis escape room.<br>Vindt het mysterie uit en red je vriend in de wereld van H.P. Lovecraft.',
+            'survival-details': 'GAME INFO:<br>2-6 spelers | 60 minuten<br>Overleef op eiland escape room.<br>Overleef op het onbewoonde eiland.',
+            'alice-details': 'GAME INFO:<br>2-6 spelers | 60 minuten<br>Stop de harten koningin de wonderlijke wereld van Alice in Wonderland.<br>Los puzzels op en stop de harten koningin.',
+            'chernobyl-details': 'GAME INFO:<br>2-6 spelers | 60 minuten<br>Stop het ongeluk van Chernobyl.<br>Los puzzels op en stop het ongeluk.',
+            'cursedsouls-details': 'GAME INFO:<br>2-4 spelers | 60 minuten<br>Ontdek het geheim van het huis.<br>Los puzzels op en ontdek wat er echt is gebeurd.',
+            'callofblood-details': 'GAME INFO:<br>2-4 spelers | 60 minuten<br>Red de kinderen van de psychiatrische afdeling.<br>Los puzzels op en ontdek wat er echt is gebeurd.',
+            'pyramid-details': 'GAME INFO:<br>2 of 4 spelers | 60 minuten<br>Vind de weg uit de pyramide van Nebka.<br>Veel hebben het geprobeerd, maar weinigen zijn geslaagd.',
+            'notredame-details': 'GAME INFO:<br>2 of 4 spelers | 60 minuten<br>Redt de juwelen van de Notre Dame<br>Ontsnap de vlammen en redt de juwelen.',
 
             // Multiplayer game details - updated with actual game descriptions
             'arizona-sunshine-details': 'Co-op zombie shooter in VR<br>Overleef de zombie apocalypse samen<br>Realistische wapens en tactiek<br>Teamwork essentieel voor overleving<br>Intense actie en survival elementen',
@@ -216,23 +216,23 @@ document.addEventListener('DOMContentLoaded', function () {
             'horror': 'Horror:',
 
             // Escape room game details
-            'prince-details': 'GAME INFO:<br>2-4 players | 60 minutes<br>Adventure puzzle escape room<br>Escape from the magical palace',
-            'huxley-details': 'GAME INFO:<br>2-6 players | 44 minutes<br>Sci-fi mystery escape room<br>Solve the secret of Huxley',
-            'sigma-details': 'GAME INFO:<br>2-4 players | 45 minutes<br>Military mission escape room<br>Complete the secret operation',
-            'christmas-details': 'GAME INFO:<br>2-6 players | 60 minutes<br>Christmas themed escape room<br>Save Christmas on time',
-            'jungle-details': 'GAME INFO:<br>2-6 players | 60 minutes<br>Jungle adventure escape room<br>Explore the dangerous jungle',
-            'cyberpunk-details': 'GAME INFO:<br>2-4 players | 50 minutes<br>Futuristic cyber escape room<br>Hack the system and escape',
-            'medusa-details': 'GAME INFO:<br>2-4 players | 60 minutes<br>Mythological adventure escape room<br>Defeat Medusa and escape',
-            'prison-details': 'GAME INFO:<br>2-6 players | 60 minutes<br>Prison escape room<br>Plan your escape carefully',
-            'houseoffear-details': 'GAME INFO:<br>2-4 players | 45 minutes<br>Horror escape room experience<br>Survive the house of fear',
-            'sanctum-details': 'GAME INFO:<br>2-6 players | 60 minutes<br>Mystical temple escape room<br>Discover the sanctuary secrets',
-            'survival-details': 'GAME INFO:<br>2-4 players | 50 minutes<br>Survival horror escape room<br>Survive in the wilderness',
-            'alice-details': 'GAME INFO:<br>2-6 players | 60 minutes<br>Fairy tale escape room<br>Follow Alice to Wonderland',
-            'chernobyl-details': 'GAME INFO:<br>2-6 players | 60 minutes<br>Post-apocalyptic escape room<br>Escape from the devastated zone',
-            'cursedsouls-details': 'GAME INFO:<br>2-4 players | 50 minutes<br>Supernatural horror escape room<br>Free the cursed souls',
-            'callofblood-details': 'GAME INFO:<br>2-4 players | 45 minutes<br>Dark horror escape room<br>Survive the bloodthirsty call',
-            'pyramid-details': 'GAME INFO:<br>2-4 players | 60 minutes<br>Egyptian pyramid escape room<br>Find the exit from the pyramid',
-            'notredame-details': 'GAME INFO:<br>2-4 players | 45 minutes<br>Historical escape room<br>Save the Notre Dame cathedral',
+            'prince-details': 'GAME INFO:<br>2 or 4 players | 60 minutes<br>Adventure puzzle escape room<br>Stop the evil wizard',
+            'huxley-details': 'GAME INFO:<br>2-4 players | 60 minutes<br>Sci-fi mystery escape room<br>Save Huxley in the year 3007',
+            'sigma-details': 'GAME INFO:<br>2-6 players | 60 minutes<br>Military mission escape room<br>Defuse the bomb and escape',
+            'christmas-details': 'GAME INFO:<br>2-6 players | 60 minutes<br>Christmas themed escape room<br>Help Santa deliver all gifts on time',
+            'jungle-details': 'GAME INFO:<br>2-6 players | 60 minutes<br>Escape from the jungle escape room.<br>Discover the secrets of the jungle and find the exit.',
+            'cyberpunk-details': 'GAME INFO:<br>2-6 players | 60 minutes<br>Heist escape room.<br>Plan a heist to steal important data in the future.',
+            'medusa-details': 'GAME INFO:<br>2 or 4 players | 60 minutes<br>Greek mythology escape room<br>Escape from the cave where the legendary ship of the argonauts lies.',
+            'prison-details': 'GAME INFO:<br>2-6 players | 60 minutes<br>Escape from prison escape room.<br>Escape the prison and catch the real culprit.',
+            'houseoffear-details': 'GAME INFO:<br>2-4 players | 60 minutes<br>Haunted house escape room.<br>Can you figure out what really happens in this abandoned house?',
+            'sanctum-details': 'GAME INFO:<br>2-6 players | 60 minutes<br>Save your friend in the abandoned house escape room.<br>Solve the mystery and save your friend in the world of H.P. Lovecraft.',
+            'survival-details': 'GAME INFO:<br>2-6 players | 60 minutes<br>Survive on island escape room.<br>Survive on the uninhabited island.',
+            'alice-details': 'GAME INFO:<br>2-6 players | 60 minutes<br>Stop the queen of hearts in the wonderful world of Alice in Wonderland.<br>Solve puzzles and stop the queen of hearts.',
+            'chernobyl-details': 'GAME INFO:<br>2-6 players | 60 minutes<br>Stop the Chernobyl accident.<br>Solve puzzles and stop the accident.',
+            'cursedsouls-details': 'GAME INFO:<br>2-4 players | 60 minutes<br>Discover the secret of the house.<br>Solve puzzles and discover what really happened.',
+            'callofblood-details': 'GAME INFO:<br>2-4 players | 60 minutes<br>Save the children from the psychiatric ward.<br>Solve puzzles and discover what really happened.',
+            'pyramid-details': 'GAME INFO:<br>2 or 4 players | 60 minutes<br>Find your way out of the pyramid of Nebka.<br>Many have tried, but few have succeeded.',
+            'notredame-details': 'GAME INFO:<br>2 or 4 players | 60 minutes<br>Save the jewels of Notre Dame<br>Escape the flames and save the jewels.',
 
             // Multiplayer game details - updated with actual game descriptions
             'arizona-sunshine-details': 'Co-op zombie shooter in VR<br>Survive the zombie apocalypse together<br>Realistic weapons and tactics<br>Teamwork essential for survival<br>Intense action and survival elements',
@@ -369,6 +369,18 @@ document.addEventListener('DOMContentLoaded', function () {
     // Function to update page language
     function updateLanguage(lang) {
         currentLang = lang;
+
+        // Update elements with data-i18n attributes
+        document.querySelectorAll('[data-i18n]').forEach(element => {
+            const key = element.getAttribute('data-i18n');
+            if (translations[lang][key]) {
+                if (element.innerHTML.includes('<br>')) {
+                    element.innerHTML = translations[lang][key];
+                } else {
+                    element.textContent = translations[lang][key];
+                }
+            }
+        });
 
         // Update index page buttons
         const containerButtons = document.querySelectorAll('.container button p');
@@ -536,17 +548,21 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
 
-        // Update escape room modal content (escape page)
+        // Update escape room modal content (escape page and generator page)
         document.querySelectorAll('.info-modal').forEach(modal => {
             const modalId = modal.id;
             let gameKey = modalId.replace('-modal', '');
 
-            // Handle special modal IDs
+            // Handle special modal IDs from escape page
             if (gameKey === 'houseOfFear') gameKey = 'houseoffear';
             if (gameKey === 'HOFcursedSouls') gameKey = 'cursedsouls';
             if (gameKey === 'HOFcallOfBlood') gameKey = 'callofblood';
             if (gameKey === 'escape') gameKey = 'pyramid';
             if (gameKey === 'saveNotreDame') gameKey = 'notredame';
+
+            // Handle generator page modal IDs
+            if (gameKey === 'mission') gameKey = 'sigma';
+            if (gameKey === 'housefear') gameKey = 'houseoffear';
 
             // Find all modal sections and update their content
             const sections = modal.querySelectorAll('.modal-section');
@@ -559,7 +575,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
                     if (headerText.includes('verhaal') || headerText.includes('story')) {
                         if (translations[lang][gameKey + '-story']) {
-                            paragraph.textContent = translations[lang][gameKey + '-story'];
+                            paragraph.innerHTML = translations[lang][gameKey + '-story'];
                         }
                     } else if (headerText.includes('speeltijd') || headerText.includes('playing time')) {
                         if (translations[lang][gameKey + '-time']) {
