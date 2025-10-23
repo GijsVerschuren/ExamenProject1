@@ -335,7 +335,7 @@ const games = [
         duration: "medium",
         minPlayers: 2,
         maxPlayers: 4,
-        description: "Veel hebben het geprobeerd, maar weinigen zijn geslaagd.",
+        description: "Vind de weg uit de pyramide van Nebka.",
         image: "../fotos/new fotos/escapeTheLostPyramid.png",
         modalId: "pyramid-modal",
         trailerId: "pyramid-trailer",

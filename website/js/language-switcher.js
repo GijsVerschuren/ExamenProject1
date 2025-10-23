@@ -52,7 +52,26 @@ document.addEventListener('DOMContentLoaded', function () {
             'cursedsouls-details': 'GAME INFO:<br>2-4 spelers | 60 minuten<br>Ontdek het geheim van het huis.<br>Los puzzels op en ontdek wat er echt is gebeurd.',
             'callofblood-details': 'GAME INFO:<br>2-4 spelers | 60 minuten<br>Red de kinderen van de psychiatrische afdeling.<br>Los puzzels op en ontdek wat er echt is gebeurd.',
             'pyramid-details': 'GAME INFO:<br>2 of 4 spelers | 60 minuten<br>Vind de weg uit de pyramide van Nebka.<br>Veel hebben het geprobeerd, maar weinigen zijn geslaagd.',
-            'notredame-details': 'GAME INFO:<br>2 of 4 spelers | 60 minuten<br>Redt de juwelen van de Notre Dame<br>Ontsnap de vlammen en redt de juwelen.',
+            'notredame-details': 'GAME INFO:<br>2 of 4 spelers | 60 minuten<br>Redt de juwelen van de Notre Dame<br>Ontsnap de vlammen en redt de juwelen',
+
+            // Generator page specific details (simplified descriptions)
+            'prince-generator': 'GAME INFO:<br>2 of 4 spelers | 60 minuten<br>Stop de kwaadaardige magiër',
+            'huxley-generator': 'GAME INFO:<br>2-4 spelers | 60 minuten<br>Red Huxley in het jaar 3007',
+            'sigma-generator': 'GAME INFO:<br>2-6 spelers | 60 minuten<br>Ontmantel de bom en ontsnap',
+            'christmas-generator': 'GAME INFO:<br>2-6 spelers | 60 minuten<br>Help de kerstman alle cadeau\'s op tijd te bezorgen',
+            'jungle-generator': 'GAME INFO:<br>2-6 spelers | 60 minuten<br>Ontdek de geheimen van de jungle en vind de uitgang',
+            'cyberpunk-generator': 'GAME INFO:<br>2-6 spelers | 60 minuten<br>Plan een overval om belangrijke data te stelen in de toekomst',
+            'medusa-generator': 'GAME INFO:<br>2 of 4 spelers | 60 minuten<br>Ontsnap uit de grot waar het legendarische schip van de argonauts ligt',
+            'prison-generator': 'GAME INFO:<br>2-6 spelers | 60 minuten<br>Ontsnap de gevangenis en pak de echte dader',
+            'houseoffear-generator': 'GAME INFO:<br>2-4 spelers | 60 minuten<br>Kan jij erachter komen wat er echt in dit verlaten huis gebeurt?',
+            'sanctum-generator': 'GAME INFO:<br>2-6 spelers | 60 minuten<br>Vindt het mysterie uit en red je vriend in de wereld van H.P. Lovecraft',
+            'survival-generator': 'GAME INFO:<br>2-6 spelers | 60 minuten<br>Overleef op het onbewoonde eiland',
+            'alice-generator': 'GAME INFO:<br>2-6 spelers | 60 minuten<br>Los puzzels op en stop de harten koningin',
+            'chernobyl-generator': 'GAME INFO:<br>2-6 spelers | 60 minuten<br>Los puzzels op en stop het ongeluk',
+            'cursedsouls-generator': 'GAME INFO:<br>2-4 spelers | 60 minuten<br>Los puzzels op en ontdek wat er echt is gebeurd',
+            'callofblood-generator': 'GAME INFO:<br>2-4 spelers | 60 minuten<br>Los puzzels op en ontdek wat er echt is gebeurd',
+            'pyramid-generator': 'GAME INFO:<br>2 of 4 spelers | 60 minuten<br>Vind de weg uit de pyramide van Nebka',
+            'notredame-generator': 'GAME INFO:<br>2 of 4 spelers | 60 minuten<br>Ontsnap de vlammen en redt de juwelen',
 
             // Multiplayer game details - updated with actual game descriptions
             'arizona-sunshine-details': 'Co-op zombie shooter in VR<br>Overleef de zombie apocalypse samen<br>Realistische wapens en tactiek<br>Teamwork essentieel voor overleving<br>Intense actie en survival elementen',
@@ -233,6 +252,25 @@ document.addEventListener('DOMContentLoaded', function () {
             'callofblood-details': 'GAME INFO:<br>2-4 players | 60 minutes<br>Save the children from the psychiatric ward.<br>Solve puzzles and discover what really happened.',
             'pyramid-details': 'GAME INFO:<br>2 or 4 players | 60 minutes<br>Find your way out of the pyramid of Nebka.<br>Many have tried, but few have succeeded.',
             'notredame-details': 'GAME INFO:<br>2 or 4 players | 60 minutes<br>Save the jewels of Notre Dame<br>Escape the flames and save the jewels.',
+
+            // Generator page specific details (simplified English descriptions)
+            'prince-generator': 'GAME INFO:<br>2 or 4 players | 60 minutes<br>Stop the evil wizard',
+            'huxley-generator': 'GAME INFO:<br>2-4 players | 60 minutes<br>Save Huxley in the year 3007',
+            'sigma-generator': 'GAME INFO:<br>2-6 players | 60 minutes<br>Defuse the bomb and escape',
+            'christmas-generator': 'GAME INFO:<br>2-6 players | 60 minutes<br>Help Santa deliver all gifts on time',
+            'jungle-generator': 'GAME INFO:<br>2-6 players | 60 minutes<br>Discover the secrets of the jungle and find the exit',
+            'cyberpunk-generator': 'GAME INFO:<br>2-6 players | 60 minutes<br>Plan a heist to steal important data in the future',
+            'medusa-generator': 'GAME INFO:<br>2 or 4 players | 60 minutes<br>Escape from the cave where the legendary ship of the argonauts lies',
+            'prison-generator': 'GAME INFO:<br>2-6 players | 60 minutes<br>Escape the prison and catch the real culprit',
+            'houseoffear-generator': 'GAME INFO:<br>2-4 players | 60 minutes<br>Can you figure out what really happens in this abandoned house?',
+            'sanctum-generator': 'GAME INFO:<br>2-6 players | 60 minutes<br>Solve the mystery and save your friend in the world of H.P. Lovecraft',
+            'survival-generator': 'GAME INFO:<br>2-6 players | 60 minutes<br>Survive on the uninhabited island',
+            'alice-generator': 'GAME INFO:<br>2-6 players | 60 minutes<br>Solve puzzles and stop the queen of hearts',
+            'chernobyl-generator': 'GAME INFO:<br>2-6 players | 60 minutes<br>Solve puzzles and stop the accident',
+            'cursedsouls-generator': 'GAME INFO:<br>2-4 players | 60 minutes<br>Solve puzzles and discover what really happened',
+            'callofblood-generator': 'GAME INFO:<br>2-4 players | 60 minutes<br>Solve puzzles and discover what really happened',
+            'pyramid-generator': 'GAME INFO:<br>2 or 4 players | 60 minutes<br>Find your way out of the pyramid of Nebka',
+            'notredame-generator': 'GAME INFO:<br>2 or 4 players | 60 minutes<br>Escape the flames and save the jewels',
 
             // Multiplayer game details - updated with actual game descriptions
             'arizona-sunshine-details': 'Co-op zombie shooter in VR<br>Survive the zombie apocalypse together<br>Realistic weapons and tactics<br>Teamwork essential for survival<br>Intense action and survival elements',
@@ -488,7 +526,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
 
-        // Update escape room game details (escape page)
+        // Update escape room game details (escape page and generator page)
         document.querySelectorAll('.game-card .game-details').forEach(details => {
             const gameCard = details.closest('.game-card');
             if (!gameCard) return;
@@ -496,41 +534,45 @@ document.addEventListener('DOMContentLoaded', function () {
             const gameTitle = gameCard.querySelector('.game-title')?.textContent.toLowerCase();
             if (!gameTitle) return;
 
+            // Check if we're on the generator page
+            const isGeneratorPage = window.location.pathname.includes('genereer') || document.body.classList.contains('generator-page');
+            const suffix = isGeneratorPage ? '-generator' : '-details';
+
             // Map game titles to detail keys
             if (gameTitle.includes('prince') || gameTitle.includes('persia')) {
-                details.innerHTML = translations[lang]['prince-details'];
+                details.innerHTML = translations[lang]['prince' + suffix];
             } else if (gameTitle.includes('huxley')) {
-                details.innerHTML = translations[lang]['huxley-details'];
+                details.innerHTML = translations[lang]['huxley' + suffix];
             } else if (gameTitle.includes('sigma')) {
-                details.innerHTML = translations[lang]['sigma-details'];
+                details.innerHTML = translations[lang]['sigma' + suffix];
             } else if (gameTitle.includes('christmas')) {
-                details.innerHTML = translations[lang]['christmas-details'];
+                details.innerHTML = translations[lang]['christmas' + suffix];
             } else if (gameTitle.includes('jungle')) {
-                details.innerHTML = translations[lang]['jungle-details'];
+                details.innerHTML = translations[lang]['jungle' + suffix];
             } else if (gameTitle.includes('cyberpunk')) {
-                details.innerHTML = translations[lang]['cyberpunk-details'];
+                details.innerHTML = translations[lang]['cyberpunk' + suffix];
             } else if (gameTitle.includes('medusa')) {
-                details.innerHTML = translations[lang]['medusa-details'];
+                details.innerHTML = translations[lang]['medusa' + suffix];
             } else if (gameTitle.includes('prison')) {
-                details.innerHTML = translations[lang]['prison-details'];
+                details.innerHTML = translations[lang]['prison' + suffix];
             } else if (gameTitle.includes('house of fear') && !gameTitle.includes('cursed') && !gameTitle.includes('call')) {
-                details.innerHTML = translations[lang]['houseoffear-details'];
+                details.innerHTML = translations[lang]['houseoffear' + suffix];
             } else if (gameTitle.includes('sanctum')) {
-                details.innerHTML = translations[lang]['sanctum-details'];
+                details.innerHTML = translations[lang]['sanctum' + suffix];
             } else if (gameTitle.includes('survival')) {
-                details.innerHTML = translations[lang]['survival-details'];
+                details.innerHTML = translations[lang]['survival' + suffix];
             } else if (gameTitle.includes('alice')) {
-                details.innerHTML = translations[lang]['alice-details'];
+                details.innerHTML = translations[lang]['alice' + suffix];
             } else if (gameTitle.includes('chernobyl')) {
-                details.innerHTML = translations[lang]['chernobyl-details'];
+                details.innerHTML = translations[lang]['chernobyl' + suffix];
             } else if (gameTitle.includes('cursed souls')) {
-                details.innerHTML = translations[lang]['cursedsouls-details'];
+                details.innerHTML = translations[lang]['cursedsouls' + suffix];
             } else if (gameTitle.includes('call of blood')) {
-                details.innerHTML = translations[lang]['callofblood-details'];
+                details.innerHTML = translations[lang]['callofblood' + suffix];
             } else if (gameTitle.includes('pyramid')) {
-                details.innerHTML = translations[lang]['pyramid-details'];
+                details.innerHTML = translations[lang]['pyramid' + suffix];
             } else if (gameTitle.includes('notre dame')) {
-                details.innerHTML = translations[lang]['notredame-details'];
+                details.innerHTML = translations[lang]['notredame' + suffix];
             }
         });
 
@@ -548,7 +590,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
 
-        // Update escape room modal content (escape page and generator page)
+        // Update escape room modal content (escape page only)
         document.querySelectorAll('.info-modal').forEach(modal => {
             const modalId = modal.id;
             let gameKey = modalId.replace('-modal', '');
