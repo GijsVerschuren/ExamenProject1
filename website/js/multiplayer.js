@@ -1,13 +1,38 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Option button functionality
+    // Option button functionality with filtering
     const optionButtons = document.querySelectorAll('.option-btn');
+    const gameCards = document.querySelectorAll('.multiplayer-game-card');
 
     optionButtons.forEach(button => {
         button.addEventListener('click', function () {
             // Toggle selected class
             this.classList.toggle('selected');
+
+            // Get the category from the button's class
+            const category = this.classList[1]; // Get the second class name (shooter, koken, etc.)
+
+            // Filter games based on selected categories
+            filterGames();
         });
     });
+
+    function filterGames() {
+        // Get all selected categories
+        const selectedCategories = Array.from(document.querySelectorAll('.option-btn.selected'))
+            .map(btn => btn.classList[1]);
+
+        gameCards.forEach(card => {
+            const cardCategory = card.getAttribute('data-category');
+
+            // If no categories are selected, show all games
+            // If categories are selected, only show games that DON'T match selected categories
+            if (selectedCategories.length === 0 || !selectedCategories.includes(cardCategory)) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    }
 });
 
 // Trailer modal functionality
