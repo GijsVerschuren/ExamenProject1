@@ -197,6 +197,8 @@ body {
     max-width: 320px;
     /* Even thinner - reduced from 400px */
     width: 100%;
+    height: 600px;
+    /* Fixed height for all cards */
     display: flex;
     flex-direction: column;
 }
@@ -234,6 +236,8 @@ body {
     flex-direction: column;
     gap: 0.5rem;
     /* Reduced for more compact text area */
+    flex: 1;
+    /* Take remaining space */
 }
 
 .multiplayer-game-card .game-title {
@@ -255,6 +259,8 @@ body {
     /* Tighter line spacing */
     margin-bottom: 0.8rem;
     /* Reduced bottom margin */
+    flex-grow: 1;
+    /* Take available space and push button to bottom */
 }
 
 .multiplayer-game-card .btn {
@@ -269,6 +275,8 @@ body {
     text-align: center;
     transition: all 0.3s ease;
     align-self: flex-start;
+    margin-top: auto;
+    /* Push button to bottom */
 }
 
 .multiplayer-game-card .btn:hover {
