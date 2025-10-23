@@ -240,17 +240,17 @@ document.addEventListener('DOMContentLoaded', function () {
             'sigma-details': 'GAME INFO:<br>2-6 players | 60 minutes<br>Military mission escape room<br>Defuse the bomb and escape',
             'christmas-details': 'GAME INFO:<br>2-6 players | 60 minutes<br>Christmas themed escape room<br>Help Santa deliver all gifts on time',
             'jungle-details': 'GAME INFO:<br>2-6 players | 60 minutes<br>Escape from the jungle escape room.<br>Discover the secrets of the jungle and find the exit.',
-            'cyberpunk-details': 'GAME INFO:<br>2-6 players | 60 minutes<br>Heist escape room.<br>Plan a heist to steal important data in the future.',
+            'cyberpunk-details': 'GAME INFO:<br>2-6 players | 60 minutes<br>Heist escape room.<br>Plan a heist to steal important data in the future. <br> <br><br>',
             'medusa-details': 'GAME INFO:<br>2 or 4 players | 60 minutes<br>Greek mythology escape room<br>Escape from the cave where the legendary ship of the argonauts lies.',
             'prison-details': 'GAME INFO:<br>2-6 players | 60 minutes<br>Escape from prison escape room.<br>Escape the prison and catch the real culprit.',
-            'houseoffear-details': 'GAME INFO:<br>2-4 players | 60 minutes<br>Haunted house escape room.<br>Can you figure out what really happens in this abandoned house?',
+            'houseoffear-details': 'GAME INFO:<br>2-4 players | 60 minutes<br>Haunted house escape room.<br>Can you figure out what really happens in this abandoned house? <br> <br>',
             'sanctum-details': 'GAME INFO:<br>2-6 players | 60 minutes<br>Save your friend in the abandoned house escape room.<br>Solve the mystery and save your friend in the world of H.P. Lovecraft.',
             'survival-details': 'GAME INFO:<br>2-6 players | 60 minutes<br>Survive on island escape room.<br>Survive on the uninhabited island.',
             'alice-details': 'GAME INFO:<br>2-6 players | 60 minutes<br>Stop the queen of hearts in the wonderful world of Alice in Wonderland.<br>Solve puzzles and stop the queen of hearts.',
             'chernobyl-details': 'GAME INFO:<br>2-6 players | 60 minutes<br>Stop the Chernobyl accident.<br>Solve puzzles and stop the accident.',
             'cursedsouls-details': 'GAME INFO:<br>2-4 players | 60 minutes<br>Discover the secret of the house.<br>Solve puzzles and discover what really happened.',
             'callofblood-details': 'GAME INFO:<br>2-4 players | 60 minutes<br>Save the children from the psychiatric ward.<br>Solve puzzles and discover what really happened.',
-            'pyramid-details': 'GAME INFO:<br>2 or 4 players | 60 minutes<br>Find your way out of the pyramid of Nebka.<br>Many have tried, but few have succeeded.',
+            'pyramid-details': 'GAME INFO:<br>2 or 4 players | 60 minutes<br>Find your way out of the pyramid of Nebka.<br>Many have tried, but few have succeeded. <br> <br>',
             'notredame-details': 'GAME INFO:<br>2 or 4 players | 60 minutes<br>Save the jewels of Notre Dame<br>Escape the flames and save the jewels.',
 
             // Generator page specific details (simplified English descriptions)
@@ -402,7 +402,7 @@ document.addEventListener('DOMContentLoaded', function () {
     };
 
     // Current language
-    let currentLang = 'nl';
+    let currentLang = localStorage.getItem('selectedLanguage') || 'nl';
 
     // Function to update page language
     function updateLanguage(lang) {
@@ -683,12 +683,33 @@ document.addEventListener('DOMContentLoaded', function () {
                     languageSelector.classList.remove('nl-active');
                 }
 
-                // Update language
+                // Update language and save to localStorage
                 updateLanguage(this.dataset.lang);
+                localStorage.setItem('selectedLanguage', this.dataset.lang);
             });
         });
     }
 
-    // Initialize with Dutch as default language
-    updateLanguage('nl');
+    // Initialize with saved language or Dutch as default
+    const savedLang = localStorage.getItem('selectedLanguage') || 'nl';
+
+    // Set the correct button as active and update UI
+    if (langButtons.length > 0 && languageSelector) {
+        langButtons.forEach(btn => {
+            if (btn.dataset.lang === savedLang) {
+                btn.classList.add('active');
+            } else {
+                btn.classList.remove('active');
+            }
+        });
+
+        // Handle toggle animation based on saved language
+        if (savedLang === 'nl') {
+            languageSelector.classList.add('nl-active');
+        } else {
+            languageSelector.classList.remove('nl-active');
+        }
+    }
+
+    updateLanguage(savedLang);
 });
