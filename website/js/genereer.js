@@ -439,11 +439,18 @@ function displayResults(games) {
     const recommendedGames = document.getElementById('recommendedGames');
     const playerCount = parseInt(document.getElementById('personenSlider').value);
 
+    // Get current language from localStorage (same as language-switcher.js)
+    const currentLang = localStorage.getItem('selectedLanguage') || 'nl';
+
     if (games.length === 0) {
+        // Get translations for no games message
+        const noGamesMsg = getTranslation('generator-no-games', currentLang);
+        const tryDifferentMsg = getTranslation('generator-try-different', currentLang);
+
         recommendedGames.innerHTML = `
             <div style="text-align: center; padding: 2rem; color: #ccc;">
-                <p>Geen spellen gevonden voor het gewenste aantal spelers.</p>
-                <p>Probeer een ander aantal spelers te selecteren.</p>
+                <p>${noGamesMsg}</p>
+                <p>${tryDifferentMsg}</p>
             </div>
         `;
     } else {
@@ -460,24 +467,24 @@ function displayResults(games) {
                     <div class="game-title">${game.name}</div>
                     <div class="sliders">
                         <div class="slider-item">
-                            <span class="slider-label">Avontuur</span>
+                            <span class="slider-label">${getTranslation('generator-slider-avontuur', currentLang)}</span>
                             <input type="range" min="0" max="10" value="${Math.round(game.characteristics.avontuur / 10)}" disabled>
                         </div>
                         <div class="slider-item">
-                            <span class="slider-label">Actie</span>
+                            <span class="slider-label">${getTranslation('generator-slider-actie', currentLang)}</span>
                             <input type="range" min="0" max="10" value="${Math.round(game.characteristics.actie / 10)}" disabled>
                         </div>
                         <div class="slider-item">
-                            <span class="slider-label">Puzzelen</span>
+                            <span class="slider-label">${getTranslation('generator-slider-puzzelen', currentLang)}</span>
                             <input type="range" min="0" max="10" value="${Math.round(game.characteristics.puzzelen / 10)}" disabled>
                         </div>
                     </div>
                     <div class="game-details">
-                        ${getDifficultyText(game.difficulty)} | ${game.minPlayers}-${game.maxPlayers} spelers<br>
-                        ${Math.round(game.matchScore)}% Match<br>
-                        ${game.description}
+                        ${getDifficultyText(game.difficulty, currentLang)} | ${game.minPlayers}-${game.maxPlayers} ${getTranslation('generator-players', currentLang)}<br>
+                        ${Math.round(game.matchScore)}% ${getTranslation('generator-match', currentLang)}<br>
+                        ${getGameDescription(game.name, currentLang)}
                     </div>
-                    <a href="#" class="btn" onclick="openTrailerModal('${game.trailerId}')">Bekijk de trailer</a>
+                    <a href="#" class="btn" onclick="openTrailerModal('${game.trailerId}')">${getTranslation('trailer-btn', currentLang)}</a>
                 </div>
             </div>
         `).join('');
@@ -493,11 +500,299 @@ function displayResults(games) {
     setTimeout(() => {
         resultSection.classList.add('show');
     }, 50);
-} function getDifficultyText(difficulty) {
+}
+
+// Helper function to get game descriptions
+function getGameDescription(gameName, lang) {
+    const gameKeyMap = {
+        "Prince of Persia: The Dagger of Time": "prince-generator",
+        "Huxley": "huxley-generator",
+        "Mission Sigma": "sigma-generator",
+        "Christmas Escape": "christmas-generator",
+        "Beyond Medusa's Gate": "medusa-generator",
+        "The Prison": "prison-generator",
+        "Cyberpunk": "cyberpunk-generator",
+        "House Of Fear": "houseoffear-generator",
+        "Sanctum": "sanctum-generator",
+        "Jungle Quest": "jungle-generator",
+        "Survival": "survival-generator",
+        "Alice": "alice-generator",
+        "Chernobyl": "chernobyl-generator",
+        "House Of Fear: Cursed Souls": "cursedsouls-generator",
+        "House Of Fear: Call Of Blood": "callofblood-generator",
+        "Escape The Lost Pyramid": "pyramid-generator",
+        "Save Notre Dame On Fire": "notredame-generator"
+    };
+
+    const key = gameKeyMap[gameName];
+    if (key) {
+        return getTranslation(key, lang);
+    }
+    return "Game description not found";
+}
+
+// Helper function to get translations
+function getTranslation(key, lang) {
+    // Basic translations for generator popup and modals
+    const translations = {
+        nl: {
+            'generator-slider-avontuur': 'Avontuur',
+            'generator-slider-actie': 'Actie',
+            'generator-slider-puzzelen': 'Puzzelen',
+            'generator-players': 'spelers',
+            'generator-match': 'Match',
+            'generator-no-games': 'Geen spellen gevonden voor het gewenste aantal spelers.',
+            'generator-try-different': 'Probeer een ander aantal spelers te selecteren.',
+            'trailer-btn': 'Bekijk de trailer',
+            'makkelijk': 'Makkelijk',
+            'medium': 'Medium',
+            'moeilijk': 'Moeilijk',
+
+            // Modal headers
+            'verhaal': 'Verhaal',
+            'speeltijd': 'Speeltijd',
+            'spelers': 'Spelers',
+            'leeftijd': 'Leeftijd',
+
+            // Game descriptions (generator versions)
+            'prince-generator': 'Stop de kwaadaardige magiër',
+            'huxley-generator': 'Red Huxley in het jaar 3007',
+            'sigma-generator': 'Ontmantel de bom en ontsnap',
+            'christmas-generator': 'Help de kerstman alle cadeau\'s op tijd te bezorgen',
+            'jungle-generator': 'Ontdek de geheimen van de jungle en vind de uitgang',
+            'cyberpunk-generator': 'Plan een overval om belangrijke data te stelen in de toekomst',
+            'medusa-generator': 'Ontsnap uit de grot waar het legendarische schip van de argonauts ligt',
+            'prison-generator': 'Ontsnap de gevangenis en pak de echte dader',
+            'houseoffear-generator': 'Kan jij erachter komen wat er echt in dit verlaten huis gebeurt?',
+            'sanctum-generator': 'Vindt het mysterie uit en red je vriend in de wereld van H.P. Lovecraft',
+            'survival-generator': 'Overleef op het onbewoonde eiland',
+            'alice-generator': 'Los puzzels op en stop de harten koningin',
+            'chernobyl-generator': 'Los puzzels op en stop het ongeluk',
+            'cursedsouls-generator': 'Los puzzels op en ontdek wat er echt is gebeurd',
+            'callofblood-generator': 'Los puzzels op en ontdek wat er echt is gebeurd',
+            'pyramid-generator': 'Vind de weg uit de pyramide van Nebka',
+            'notredame-generator': 'Ontsnap de vlammen en redt de juwelen',
+
+            // Modal content
+            'prince-story': 'Jullie worden opgeroepen door Keileena om de kwade magiër te stoppen met de Dagger of Time. Reis door betoverde paleizen, los uitdagende puzzels op en voorkom dat de tijd zelf uit de hand loopt.',
+            'prince-time': '60 minuten',
+            'prince-players': '2 of 4 spelers',
+            'prince-age': '12+ jaar',
+
+            'huxley-story': 'Het jaar is 3007. mensheid is dood, jullie zijn de enige overlevende. Jullie taak is om Huxley te helpen en de apocalypse terug te draaien.',
+            'huxley-time': '50-60 minuten',
+            'huxley-players': '2-4 spelers',
+            'huxley-age': '12+ jaar',
+
+            'sigma-story': 'Jullie zijn elite soldaten die op een geheime missie zijn gestuurd om een bom te ontmantelen. Werk samen om aanwijzingen te vinden, puzzels op te lossen en de bom te ontmantelen voordat het te laat is.',
+            'sigma-time': '60 minuten',
+            'sigma-players': '2-6 spelers',
+            'sigma-age': '13+ jaar',
+
+            'christmas-story': 'Kerstmis is in gevaar! De kerstman is in een sneeuwstorm terechtgekomen. Het is aan jullie om de kerstman te redden.',
+            'christmas-time': '60 minuten',
+            'christmas-players': '2-6 spelers',
+            'christmas-age': '8+ jaar',
+
+            // Additional modal content for all games
+            'medusa-story': 'Vind jullie weg uit de Aegean grot waar het legendarische schip van de Argonauts ligt.',
+            'medusa-time': '60 minuten',
+            'medusa-players': '2 of 4 spelers',
+            'medusa-age': '12+ jaar',
+
+            'prison-story': 'Jullie zijn onterecht in de gevangenis gezet. Gelukkig zijn je vrienden nog vrij. Werk samen om te ontsnappen en de echte dader te vinden.',
+            'prison-time': '60 minuten',
+            'prison-players': '2-6 spelers',
+            'prison-age': '13+ jaar',
+
+            'cyberpunk-story': 'Het is het begin van de 22ste eeuw. Sameneleving valt uit elkaar door alle technologie. Jullie zijn een groep cyborgs die een overval moeten plegen om belangrijke data te stelen.',
+            'cyberpunk-time': '60 minuten',
+            'cyberpunk-players': '2-6 spelers',
+            'cyberpunk-age': '10+ jaar',
+
+            'houseoffear-story': 'Een verlaten huis in het bos. Je loopt naar binnen en voordat je het weet zit je vast. Kunnen jullie erachter komen wat er echt in dit huis gebeurt en ontsnappen?',
+            'houseoffear-time': '45-60 minuten',
+            'houseoffear-players': '2-4 spelers',
+            'houseoffear-age': '16+ jaar',
+
+            'sanctum-story': 'Je vriend is verdwenen in een verlaten huis. Treedt toe in de wereld van H.P. Lovecraft en vind het mysterie om je vriend te redden.',
+            'sanctum-time': '60 minuten',
+            'sanctum-players': '2-6 spelers',
+            'sanctum-age': '16+ jaar',
+
+            'jungle-story': 'Een raar portaal heeft jullie naar een mysterieus jungle eiland gebracht. los de puzzels van de jungle op en vind de uitgang.',
+            'jungle-time': '45-60 minuten',
+            'jungle-players': '2-6 spelers',
+            'jungle-age': '10+ jaar',
+
+            'survival-story': 'Na een vliegtuigongeluk zijn jullie gestrand op een onbewoond eiland. Werk samen om te overleven en een manier te vinden om te ontsnappen.',
+            'survival-time': '45-70 minuten',
+            'survival-players': '2-6 spelers',
+            'survival-age': '10+ jaar',
+
+            'alice-story': 'Kijk door de ogen van Alice en stop de harten koningin in de wonderlijke wereld van Alice in Wonderland. Los puzzels op en stop de harten koningin.',
+            'alice-time': '50-60 minuten',
+            'alice-players': '2-6 spelers',
+            'alice-age': '13+ jaar',
+
+            'chernobyl-story': 'Reis terug in de tijd naar de ramp van chernobyl. Los puzzels op en stop het ongeluk voordat het te laat is.',
+            'chernobyl-time': '60 minuten',
+            'chernobyl-players': '2-6 spelers',
+            'chernobyl-age': '13+ jaar',
+
+            'cursedsouls-story': 'Een verlaten huis. Op een dag heeft een gek iedereen in het huis vermoord. Jullie horen de stemmen van de kinderen nog in het huis. treedt binnen en los het mysterie op.',
+            'cursedsouls-time': '60 minuten',
+            'cursedsouls-players': '2-4 spelers',
+            'cursedsouls-age': '16+ jaar',
+
+            'callofblood-story': 'Jullie zijn op zoek naar de verdwenen kinderen van de psychiatrische afdeling. Treedt binnen in het huis en los het mysterie op voordat het te laat is.',
+            'callofblood-time': '60 minuten',
+            'callofblood-players': '2-4 spelers',
+            'callofblood-age': '16+ jaar',
+
+            'pyramid-story': 'Stap in de wereld van Assassin\'s Creed en vind de weg uit de pyramide van Nebka. Veel hebben het geprobeerd, maar weinigen zijn geslaagd.',
+            'pyramid-time': '50-60 minuten',
+            'pyramid-players': '2 of 4 spelers',
+            'pyramid-age': '10+ jaar',
+
+            'notredame-story': 'Wordt een brandweerman in parijs en redt de juwelen van de Notre Dame. Ontsnap de vlammen en redt de juwelen.',
+            'notredame-time': '45-60 minuten',
+            'notredame-players': '2 of 4 spelers',
+            'notredame-age': '12+ jaar'
+        },
+        en: {
+            'generator-slider-avontuur': 'Adventure',
+            'generator-slider-actie': 'Action',
+            'generator-slider-puzzelen': 'Puzzles',
+            'generator-players': 'players',
+            'generator-match': 'Match',
+            'generator-no-games': 'No games found for the desired number of players.',
+            'generator-try-different': 'Try selecting a different number of players.',
+            'trailer-btn': 'Watch trailer',
+            'makkelijk': 'Easy',
+            'medium': 'Medium',
+            'moeilijk': 'Hard',
+
+            // Modal headers
+            'verhaal': 'Story',
+            'speeltijd': 'Playing time',
+            'spelers': 'Players',
+            'leeftijd': 'Age',
+
+            // Game descriptions (generator versions)
+            'prince-generator': 'Stop the evil wizard',
+            'huxley-generator': 'Save Huxley in the year 3007',
+            'sigma-generator': 'Defuse the bomb and escape',
+            'christmas-generator': 'Help Santa deliver all gifts on time',
+            'jungle-generator': 'Discover the secrets of the jungle and find the exit',
+            'cyberpunk-generator': 'Plan a heist to steal important data in the future',
+            'medusa-generator': 'Escape from the cave where the legendary ship of the argonauts lies',
+            'prison-generator': 'Escape the prison and catch the real culprit',
+            'houseoffear-generator': 'Can you figure out what really happens in this abandoned house?',
+            'sanctum-generator': 'Solve the mystery and save your friend in the world of H.P. Lovecraft',
+            'survival-generator': 'Survive on the uninhabited island',
+            'alice-generator': 'Solve puzzles and stop the queen of hearts',
+            'chernobyl-generator': 'Solve puzzles and stop the accident',
+            'cursedsouls-generator': 'Solve puzzles and discover what really happened',
+            'callofblood-generator': 'Solve puzzles and discover what really happened',
+            'pyramid-generator': 'Find your way out of the pyramid of Nebka',
+            'notredame-generator': 'Escape the flames and save the jewels',
+
+            // Modal content
+            'prince-story': 'You are called upon by Keileena to stop the evil sorcerer with the Dagger of Time. Travel through enchanted palaces, solve challenging puzzles and prevent time itself from getting out of hand.',
+            'prince-time': '60 minutes',
+            'prince-players': '2 or 4 players',
+            'prince-age': '12+ years',
+
+            'huxley-story': 'The year is 3007. humanity is dead, you are the only survivors. Your task is to help Huxley and reverse the apocalypse.',
+            'huxley-time': '50-60 minutes',
+            'huxley-players': '2-4 players',
+            'huxley-age': '12+ years',
+
+            'sigma-story': 'You are elite soldiers sent on a secret mission to disarm a bomb. Work together to find clues, solve puzzles and disarm the bomb before it\'s too late.',
+            'sigma-time': '60 minutes',
+            'sigma-players': '2-6 players',
+            'sigma-age': '13+ years',
+
+            'christmas-story': 'Christmas is in danger! Santa has gotten caught in a snowstorm. It\'s up to you to save Santa.',
+            'christmas-time': '60 minutes',
+            'christmas-players': '2-6 players',
+            'christmas-age': '8+ years',
+
+            // Additional modal content for all games
+            'medusa-story': 'Find your way out of the Aegean cave where the legendary ship of the Argonauts lies.',
+            'medusa-time': '60 minutes',
+            'medusa-players': '2 or 4 players',
+            'medusa-age': '12+ years',
+
+            'prison-story': 'You have been wrongfully imprisoned. Fortunately your friends are still free. Work together to escape and find the real culprit.',
+            'prison-time': '60 minutes',
+            'prison-players': '2-6 players',
+            'prison-age': '13+ years',
+
+            'cyberpunk-story': 'It\'s the beginning of the 22nd century. Society is falling apart due to all the technology. You are a group of cyborgs who must commit a heist to steal important data.',
+            'cyberpunk-time': '60 minutes',
+            'cyberpunk-players': '2-6 players',
+            'cyberpunk-age': '10+ years',
+
+            'houseoffear-story': 'An abandoned house in the woods. You walk inside and before you know it you\'re trapped. Can you figure out what really happens in this house and escape?',
+            'houseoffear-time': '45-60 minutes',
+            'houseoffear-players': '2-4 players',
+            'houseoffear-age': '16+ years',
+
+            'sanctum-story': 'Your friend has disappeared in an abandoned house. Enter the world of H.P. Lovecraft and find the mystery to save your friend.',
+            'sanctum-time': '60 minutes',
+            'sanctum-players': '2-6 players',
+            'sanctum-age': '16+ years',
+
+            'jungle-story': 'A strange portal has brought you to a mysterious jungle island. solve the puzzles of the jungle and find the exit.',
+            'jungle-time': '45-60 minutes',
+            'jungle-players': '2-6 players',
+            'jungle-age': '10+ years',
+
+            'survival-story': 'After a plane crash you are stranded on a deserted island. Work together to survive and find a way to escape.',
+            'survival-time': '45-70 minutes',
+            'survival-players': '2-6 players',
+            'survival-age': '10+ years',
+
+            'alice-story': 'Look through Alice\'s eyes and stop the queen of hearts in the wonderful world of Alice in Wonderland. Solve puzzles and stop the queen of hearts.',
+            'alice-time': '50-60 minutes',
+            'alice-players': '2-6 players',
+            'alice-age': '13+ years',
+
+            'chernobyl-story': 'Travel back in time to the Chernobyl disaster. Solve puzzles and stop the accident before it\'s too late.',
+            'chernobyl-time': '60 minutes',
+            'chernobyl-players': '2-6 players',
+            'chernobyl-age': '13+ years',
+
+            'cursedsouls-story': 'An abandoned house. One day a madman murdered everyone in the house. You still hear the voices of the children in the house. enter and solve the mystery.',
+            'cursedsouls-time': '60 minutes',
+            'cursedsouls-players': '2-4 players',
+            'cursedsouls-age': '16+ years',
+
+            'callofblood-story': 'You are looking for the missing children from the psychiatric ward. Enter the house and solve the mystery before it\'s too late.',
+            'callofblood-time': '60 minutes',
+            'callofblood-players': '2-4 players',
+            'callofblood-age': '16+ years',
+
+            'pyramid-story': 'Step into the world of Assassin\'s Creed and find your way out of Nebka\'s pyramid. Many have tried, but few have succeeded.',
+            'pyramid-time': '50-60 minutes',
+            'pyramid-players': '2 or 4 players',
+            'pyramid-age': '10+ years',
+
+            'notredame-story': 'Become a firefighter in Paris and save the jewels of Notre Dame. Escape the flames and save the jewels.',
+            'notredame-time': '45-60 minutes',
+            'notredame-players': '2 or 4 players',
+            'notredame-age': '12+ years'
+        }
+    };
+
+    return translations[lang] && translations[lang][key] ? translations[lang][key] : key;
+} function getDifficultyText(difficulty, lang) {
     switch (difficulty) {
-        case 'easy': return 'Makkelijk';
-        case 'medium': return 'Medium';
-        case 'hard': return 'Moeilijk';
+        case 'easy': return getTranslation('makkelijk', lang);
+        case 'medium': return getTranslation('medium', lang);
+        case 'hard': return getTranslation('moeilijk', lang);
         default: return difficulty;
     }
 }
@@ -512,9 +807,60 @@ function openModal(modalId) {
     if (modal) {
         modal.classList.add('active');
         document.body.style.overflow = 'hidden'; // Prevent background scrolling
+
+        // Update modal content to current language
+        updateModalLanguage(modalId);
     } else {
         console.warn(`Modal with ID '${modalId}' not found`);
     }
+}
+
+// Function to update modal content based on current language
+function updateModalLanguage(modalId) {
+    const currentLang = localStorage.getItem('selectedLanguage') || 'nl';
+    const modal = document.getElementById(modalId);
+
+    if (!modal) return;
+
+    let gameKey = modalId.replace('-modal', '');
+
+    // Handle special modal IDs from generator page
+    if (gameKey === 'mission') gameKey = 'sigma';
+    if (gameKey === 'housefear') gameKey = 'houseoffear';
+
+    // Update modal section headers
+    const sections = modal.querySelectorAll('.modal-section');
+    sections.forEach(section => {
+        const header = section.querySelector('h3');
+        const paragraph = section.querySelector('p');
+
+        if (header && paragraph) {
+            const headerText = header.textContent.toLowerCase().trim();
+
+            // Update headers
+            if (headerText.includes('verhaal') || headerText.includes('story')) {
+                header.textContent = getTranslation('verhaal', currentLang);
+                if (getTranslation(`${gameKey}-story`, currentLang)) {
+                    paragraph.innerHTML = getTranslation(`${gameKey}-story`, currentLang);
+                }
+            } else if (headerText.includes('speeltijd') || headerText.includes('playing time')) {
+                header.textContent = getTranslation('speeltijd', currentLang);
+                if (getTranslation(`${gameKey}-time`, currentLang)) {
+                    paragraph.textContent = getTranslation(`${gameKey}-time`, currentLang);
+                }
+            } else if (headerText.includes('spelers') || headerText.includes('players')) {
+                header.textContent = getTranslation('spelers', currentLang);
+                if (getTranslation(`${gameKey}-players`, currentLang)) {
+                    paragraph.textContent = getTranslation(`${gameKey}-players`, currentLang);
+                }
+            } else if (headerText.includes('leeftijd') || headerText.includes('age')) {
+                header.textContent = getTranslation('leeftijd', currentLang);
+                if (getTranslation(`${gameKey}-age`, currentLang)) {
+                    paragraph.textContent = getTranslation(`${gameKey}-age`, currentLang);
+                }
+            }
+        }
+    });
 }
 
 function closeModal(modalId) {

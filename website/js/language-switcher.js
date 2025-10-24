@@ -198,7 +198,16 @@ document.addEventListener('DOMContentLoaded', function () {
             'smash-point-modal': 'Smash Point - Trailer',
 
             // Video error message
-            'video-error': 'Uw browser ondersteunt de video tag niet.'
+            'video-error': 'Uw browser ondersteunt de video tag niet.',
+
+            // Generator popup translations
+            'generator-slider-avontuur': 'Avontuur',
+            'generator-slider-actie': 'Actie',
+            'generator-slider-puzzelen': 'Puzzelen',
+            'generator-players': 'spelers',
+            'generator-match': 'Match',
+            'generator-no-games': 'Geen spellen gevonden voor het gewenste aantal spelers.',
+            'generator-try-different': 'Probeer een ander aantal spelers te selecteren.'
         },
         en: {
             // Common elements
@@ -397,7 +406,16 @@ document.addEventListener('DOMContentLoaded', function () {
             'smash-point-modal': 'Smash Point - Trailer',
 
             // Video error message
-            'video-error': 'Your browser does not support the video tag.'
+            'video-error': 'Your browser does not support the video tag.',
+
+            // Generator popup translations
+            'generator-slider-avontuur': 'Adventure',
+            'generator-slider-actie': 'Action',
+            'generator-slider-puzzelen': 'Puzzles',
+            'generator-players': 'players',
+            'generator-match': 'Match',
+            'generator-no-games': 'No games found for the desired number of players.',
+            'generator-try-different': 'Try selecting a different number of players.'
         }
     };
 
