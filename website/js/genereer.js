@@ -372,6 +372,9 @@ function generateGames() {
 
     // Get player count from the new slider
     const playerCount = parseInt(document.getElementById('personenSlider').value);
+    if(playerCount % 2 !== 0) {
+        let validGames = 
+    }
 
     // Calculate match scores for all games
     const gamesWithScores = games.map(game => {
