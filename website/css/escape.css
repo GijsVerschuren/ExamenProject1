@@ -43,7 +43,7 @@ body {
 
 .back-arrow {
     position: fixed;
-    top: 15px;
+    bottom: 15px;
     left: 15px;
     z-index: 10;
 }
@@ -71,7 +71,7 @@ body {
 
 .language {
     position: fixed;
-    top: 15px;
+    bottom: 15px;
     right: 15px;
     z-index: 10;
 }
@@ -563,12 +563,12 @@ body {
     }
 
     .language {
-        top: 12px;
+        bottom: 12px;
         right: 12px;
     }
 
     .back-arrow {
-        top: 12px;
+        bottom: 12px;
         left: 12px;
     }
 
@@ -620,12 +620,12 @@ body {
     }
 
     .language {
-        top: 10px;
+        bottom: 10px;
         right: 10px;
     }
 
     .back-arrow {
-        top: 10px;
+        bottom: 10px;
         left: 10px;
     }
 
