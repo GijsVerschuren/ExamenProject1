@@ -547,6 +547,8 @@ function getTranslation(key, lang) {
             'makkelijk': 'Makkelijk',
             'medium': 'Medium',
             'moeilijk': 'Moeilijk',
+            'toon-instellingen': 'Toon Instellingen',
+            'verberg-instellingen': 'Verberg Instellingen',
 
             // Modal headers
             'verhaal': 'Verhaal',
@@ -672,6 +674,8 @@ function getTranslation(key, lang) {
             'makkelijk': 'Easy',
             'medium': 'Medium',
             'moeilijk': 'Hard',
+            'toon-instellingen': 'Show Settings',
+            'verberg-instellingen': 'Hide Settings',
 
             // Modal headers
             'verhaal': 'Story',
@@ -927,7 +931,10 @@ function collapsePreferences() {
     if (preferenceSection && collapseToggle) {
         preferenceSection.classList.add('collapsed');
         collapseToggle.classList.add('visible');
-        collapseToggle.textContent = 'Toon Instellingen';
+
+        // Get current language and set appropriate text
+        const currentLang = localStorage.getItem('selectedLanguage') || 'nl';
+        collapseToggle.textContent = getTranslation('toon-instellingen', currentLang);
     }
 }
 
@@ -939,7 +946,10 @@ function expandPreferences() {
 
     if (preferenceSection && collapseToggle) {
         preferenceSection.classList.remove('collapsed');
-        collapseToggle.textContent = 'Verberg Instellingen';
+
+        // Get current language and set appropriate text
+        const currentLang = localStorage.getItem('selectedLanguage') || 'nl';
+        collapseToggle.textContent = getTranslation('verberg-instellingen', currentLang);
         collapseToggle.classList.remove('visible');
 
         // Show the generate button again

@@ -28,6 +28,8 @@ document.addEventListener('DOMContentLoaded', function () {
             'bekijk-alle-spellen': 'Bekijk Alle Spellen',
             'aantal-personen': 'Aantal personen:',
             'vind-passende-spellen': 'Vind passende spellen',
+            'toon-instellingen': 'Toon Instellingen',
+            'verberg-instellingen': 'Verberg Instellingen',
 
             // Slider labels
             'avontuur': 'Avontuur:',
@@ -236,6 +238,8 @@ document.addEventListener('DOMContentLoaded', function () {
             'bekijk-alle-spellen': 'View All Games',
             'aantal-personen': 'Number of people:',
             'vind-passende-spellen': 'Find matching games',
+            'toon-instellingen': 'Show Settings',
+            'verberg-instellingen': 'Hide Settings',
 
             // Slider labels
             'avontuur': 'Adventure:',
