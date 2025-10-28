@@ -372,14 +372,13 @@ function generateGames() {
 
     // Get player count from the new slider
     const playerCount = parseInt(document.getElementById('personenSlider').value);
-    if(playerCount % 2 !== 0) {
-        let validGames = 
-    }
+
+
 
     // Calculate match scores for all games
     const gamesWithScores = games.map(game => {
-        // If 8 or more players, show all games regardless of player limits
-        if (playerCount >= 8) {
+        // If 7 or more players, show all games regardless of player limits
+        if (playerCount >= 7) {
             // Calculate similarity score (0-100)
             const avontuurDiff = Math.abs(avontuurValue - game.characteristics.avontuur);
             const actieDiff = Math.abs(actieValue - game.characteristics.actie);
@@ -393,7 +392,7 @@ function generateGames() {
 
             return { ...game, matchScore };
         } else {
-            // For less than 8 players, check if player count is within range
+            // For less than 7 players, check if player count is within range
             const playerMatch = playerCount >= game.minPlayers && playerCount <= game.maxPlayers;
 
             if (!playerMatch) {
@@ -417,14 +416,19 @@ function generateGames() {
 
     // Filter and sort games based on player count
     let validGames;
-    if (playerCount >= 8) {
-        // For 8+ players, show all games sorted by match score
+    if (playerCount >= 7) {
+        // For 7+ players, show all games sorted by match score
         validGames = gamesWithScores.sort((a, b) => b.matchScore - a.matchScore);
     } else {
-        // For less than 8 players, filter out games with 0 score and sort by match score
+        // For less than 7 players, filter out games with 0 score and sort by match score
         validGames = gamesWithScores
             .filter(game => game.matchScore > 0)
             .sort((a, b) => b.matchScore - a.matchScore);
+    }
+
+    // If player count is odd, filter out Ubisoft games (regardless of player count)
+    if (playerCount % 2 !== 0) {
+        validGames = validGames.filter((game) => game.platform !== 'ubisoft');
     }
 
     // Take top 6 games (or all if less than 6)
