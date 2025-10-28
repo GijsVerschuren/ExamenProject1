@@ -135,7 +135,8 @@ function openModal(modalId) {
     const modal = document.getElementById(modalId);
     if (modal) {
         modal.classList.add('active');
-        document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        document.body.style.overflowY = 'hidden'; // Prevent background scrolling
+        document.body.style.overflowX = 'hidden'; // Keep horizontal scroll hidden
     } else {
         console.warn(`Modal with ID '${modalId}' not found`);
     }
@@ -145,7 +146,8 @@ function closeModal(modalId) {
     const modal = document.getElementById(modalId);
     if (modal) {
         modal.classList.remove('active');
-        document.body.style.overflow = 'auto'; // Re-enable scrolling
+        document.body.style.overflowY = 'auto'; // Re-enable vertical scrolling
+        document.body.style.overflowX = 'hidden'; // Keep horizontal scroll hidden
     } else {
         console.warn(`Modal with ID '${modalId}' not found`);
     }
@@ -156,7 +158,8 @@ document.addEventListener('click', function (event) {
     if (event.target.classList.contains('info-modal')) {
         const modal = event.target;
         modal.classList.remove('active');
-        document.body.style.overflow = 'auto';
+        document.body.style.overflowY = 'auto';
+        document.body.style.overflowX = 'hidden';
     }
 });
 
@@ -166,7 +169,8 @@ document.addEventListener('keydown', function (event) {
         const activeModal = document.querySelector('.info-modal.active');
         if (activeModal) {
             activeModal.classList.remove('active');
-            document.body.style.overflow = 'auto';
+            document.body.style.overflowY = 'auto';
+            document.body.style.overflowX = 'hidden';
         }
 
         // Also close trailer modals
@@ -182,7 +186,8 @@ function openTrailerModal(modalId) {
     const modal = document.getElementById(modalId);
     if (modal) {
         modal.classList.add('active');
-        document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        document.body.style.overflowY = 'hidden'; // Prevent background scrolling
+        document.body.style.overflowX = 'hidden'; // Keep horizontal scroll hidden
 
         // Start playing the video
         const video = modal.querySelector('video');
@@ -200,7 +205,8 @@ function closeTrailerModal(modalId) {
     const modal = document.getElementById(modalId);
     if (modal) {
         modal.classList.remove('active');
-        document.body.style.overflow = 'auto'; // Re-enable scrolling
+        document.body.style.overflowY = 'auto'; // Re-enable vertical scrolling
+        document.body.style.overflowX = 'hidden'; // Keep horizontal scroll hidden
 
         // Stop the video
         const video = modal.querySelector('video');

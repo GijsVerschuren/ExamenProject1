@@ -40,7 +40,8 @@ function openTrailerModal(modalId) {
     const modal = document.getElementById(modalId);
     if (modal) {
         modal.classList.add('active');
-        document.body.style.overflow = 'hidden';
+        document.body.style.overflowY = 'hidden';
+        document.body.style.overflowX = 'hidden';
 
         // Start video if it exists
         const video = modal.querySelector('video');
@@ -59,7 +60,8 @@ function closeTrailerModal(modalId) {
     const modal = document.getElementById(modalId);
     if (modal) {
         modal.classList.remove('active');
-        document.body.style.overflow = 'auto';
+        document.body.style.overflowY = 'auto';
+        document.body.style.overflowX = 'hidden';
 
         // Stop video if it exists
         const video = modal.querySelector('video');
