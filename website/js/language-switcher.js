@@ -76,16 +76,16 @@ document.addEventListener('DOMContentLoaded', function () {
             'notredame-generator': 'GAME INFO:<br>2 of 4 spelers | 60 minuten<br>Ontsnap de vlammen en redt de juwelen',
 
             // Multiplayer game details - updated with actual game descriptions
-            'arizona-sunshine-details': 'Co-op zombie shooter in VR<br>Overleef de zombie apocalypse samen<br>Realistische wapens en tactiek<br>Teamwork essentieel voor overleving<br>Intense actie en survival elementen',
+            'arizona-sunshine-details': 'Co-op zombie shooter in VR<br>Overleef de zombie apocalypse samen<br>Realistische wapens en tactiek<br>Teamwork essentieel voor overleving',
             'archer-details': 'Co-op boogschutter in VR<br>Overleef golven van monsters samen<br>Realistische boogmechanica en tactiek',
             'arviarena-details': 'Co-op shooter in VR<br>Strijd tegen andere teams in een arena<br>Speel tegen andere spelers of AI',
-            'chefs-details': 'Co-op kookspel in VR<br>Werk samen of alleen om de beste gerechten te maken<br>Maak samen burgers, buritos en meer<br>Net 5 unieke restaurants',
+            'chefs-details': 'Co-op kookspel in VR<br>Werk samen of alleen om de beste gerechten te maken<br>Maak samen burgers, buritos en meer',
             'elven-assassin-details': 'Co-op boogschutter in VR<br>Overleef golven van monsters samen<br>Realistische boogmechanica en tactiek<br>Meeredere omgevingen om uit te kiezen',
-            'headgun-details': 'PVP en co-op shooter in VR<br>Strijd tegen andere spelers of werk samen tegen AI<br>vier unieke speelomgevingen<br>drie spelmodi: Deathmatch, Team Deathmatch en Capture the Flag',
+            'headgun-details': 'PVP en co-op shooter in VR<br>Strijd tegen andere spelers of werk samen tegen AI<br>vier unieke speelomgevingen',
             'loco-dojo-details': 'Co-op party game in VR<br>Speel tegen anderen spelers in mini games<br>Unieke en grappige uitdagingen<br>Meer als 15 mini-games',
             'plush-rush-details': 'Co-op party game in VR<br>Werk samen tegen het speelgoed<br>Vershillende wapens<br>bescherm de snoepjes van het speelgoed',
             'revolvr-details': 'PVP shooter in VR<br>Strijd tegen je vrienden in het wilde westen<br>Kom erachter wie de beste schutter is<br>schiet en duik weg',
-            'rhythmatic-details': 'Co-op muziekspel in VR<br>Speel samen of alleen<br>breek blokken op de beat van de muziek<br>kies uit verschillende liedjes en moeilijkheidsgraden',
+            'rhythmatic-details': 'Co-op muziekspel in VR<br>Speel samen of alleen<br>breek blokken op de beat van de muziek<br>kies uit verschillende liedjes',
             'rotten-apple-details': 'Co-op zombie shooter in VR<br>Overleef de golven van zombies samen<br>dood alle zombies en krijg veel geld<br>koop nieuwe wapens en upgrades',
             'smash-point-details': 'Co-op shooter game in VR<br>Speel tegen andere speleres<br>kies uit 14 verschillende karakters<br>speel meerdere rondes om te winnen',
 
@@ -286,16 +286,16 @@ document.addEventListener('DOMContentLoaded', function () {
             'notredame-generator': 'GAME INFO:<br>2 or 4 players | 60 minutes<br>Escape the flames and save the jewels',
 
             // Multiplayer game details - updated with actual game descriptions
-            'arizona-sunshine-details': 'Co-op zombie shooter in VR<br>Survive the zombie apocalypse together<br>Realistic weapons and tactics<br>Teamwork essential for survival<br>Intense action and survival elements',
+            'arizona-sunshine-details': 'Co-op zombie shooter in VR<br>Survive the zombie apocalypse together<br>Realistic weapons and tactics<br>Teamwork essential for survival',
             'archer-details': 'Co-op archery game in VR<br>Survive waves of monsters together<br>Realistic bow mechanics and tactics',
             'arviarena-details': 'Co-op shooter in VR<br>Fight against other teams in an arena<br>Play against other players or AI',
-            'chefs-details': 'Co-op cooking game in VR<br>Work together or alone to make the best dishes<br>Make burgers, burritos and more together<br>Just 5 unique restaurants',
+            'chefs-details': 'Co-op cooking game in VR<br>Work together or alone to make the best dishes<br>Make burgers, burritos and more together',
             'elven-assassin-details': 'Co-op archery game in VR<br>Survive waves of monsters together<br>Realistic bow mechanics and tactics<br>Multiple environments to choose from',
-            'headgun-details': 'PVP and co-op shooter in VR<br>Fight against other players or work together against AI<br>four unique game environments<br>three game modes: Deathmatch, Team Deathmatch and Capture the Flag',
+            'headgun-details': 'PVP and co-op shooter in VR<br>Fight against other players or work together against AI<br>four unique game environments',
             'loco-dojo-details': 'Co-op party game in VR<br>Play against other players in mini games<br>Unique and funny challenges<br>More than 15 mini-games',
             'plush-rush-details': 'Co-op party game in VR<br>Work together against the toys<br>Different weapons<br>protect the candy from the toys',
             'revolvr-details': 'PVP shooter in VR<br>Fight against your friends in the wild west<br>Find out who is the best shooter<br>shoot and duck for cover',
-            'rhythmatic-details': 'Co-op music game in VR<br>Play together or alone<br>break blocks to the beat of the music<br>choose from different songs and difficulty levels',
+            'rhythmatic-details': 'Co-op music game in VR<br>Play together or alone<br>break blocks to the beat of the music<br>choose from different songs',
             'rotten-apple-details': 'Co-op zombie shooter in VR<br>Survive the waves of zombies together<br>kill all zombies and get lots of money<br>buy new weapons and upgrades',
             'smash-point-details': 'Co-op shooter game in VR<br>Play against other players<br>choose from 14 different characters<br>play multiple rounds to win',
 
