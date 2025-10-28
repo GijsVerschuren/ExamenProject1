@@ -37,6 +37,7 @@ body {
     align-items: center;
     box-sizing: border-box;
     padding-top: 80px;
+    overflow-x: hidden;
 }
 
 /* Language Selector Styles */
