@@ -204,7 +204,8 @@ body {
     /* Fixed height for all cards */
     display: flex;
     flex-direction: column;
-    position: relative; /* Enable absolute positioning for button */
+    position: relative;
+    /* Enable absolute positioning for button */
 }
 
 .multiplayer-game-card:hover {
@@ -244,7 +245,8 @@ body {
     /* Take remaining space */
     min-height: 0;
     /* Ensure proper flex behavior */
-    padding-bottom: 60px; /* Add space for the fixed button */
+    padding-bottom: 60px;
+    /* Add space for the fixed button */
 }
 
 .multiplayer-game-card .game-title {
@@ -268,7 +270,8 @@ body {
     /* Tighter line spacing */
     margin-bottom: 0.8rem;
     /* Reduced bottom margin */
-    overflow: hidden; /* Hide overflow text if it's too long */
+    overflow: hidden;
+    /* Hide overflow text if it's too long */
 }
 
 .multiplayer-game-card .btn {
