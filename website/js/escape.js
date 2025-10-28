@@ -63,15 +63,9 @@ document.addEventListener('DOMContentLoaded', function () {
             if (shouldShow) {
                 // Show the card with animation
                 card.classList.remove('hidden');
-                setTimeout(() => {
-                    card.style.display = 'block';
-                }, 10);
             } else {
                 // Hide the card with animation
                 card.classList.add('hidden');
-                setTimeout(() => {
-                    card.style.display = 'none';
-                }, 300);
             }
         });
     }
